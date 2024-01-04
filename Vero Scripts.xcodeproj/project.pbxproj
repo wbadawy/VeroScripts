@@ -105,6 +105,22 @@
 				495CCC4F2B45E3AC00BBA415 /* Assets.xcassets */,
 				495CCC542B45E3AC00BBA415 /* Vero_Scripts.entitlements */,
 				495CCC512B45E3AC00BBA415 /* Preview Content */,
+				497298652B4760F80041AB52 /* String Resources */,
+			);
+			path = "Vero Scripts";
+			sourceTree = "<group>";
+		};
+		495CCC512B45E3AC00BBA415 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				495CCC522B45E3AC00BBA415 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		497298652B4760F80041AB52 /* String Resources */ = {
+			isa = PBXGroup;
+			children = (
 				49D7B2B72B4732C100A61517 /* new_alltrees.xcstrings */,
 				49D7B2B82B4732C100A61517 /* alltrees.stringsdict */,
 				49D7B2BB2B47342000A61517 /* new_beaches.xcstrings */,
@@ -130,15 +146,7 @@
 				49D7B2C32B4754A600A61517 /* new_potd.xcstrings */,
 				49D7B2C62B4754A600A61517 /* potd.stringsdict */,
 			);
-			path = "Vero Scripts";
-			sourceTree = "<group>";
-		};
-		495CCC512B45E3AC00BBA415 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				495CCC522B45E3AC00BBA415 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
+			name = "String Resources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
