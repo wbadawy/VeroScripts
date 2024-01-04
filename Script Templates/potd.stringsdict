@@ -3,8 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>comment</key>
-	<string>✨✨Congratulations✨✨ on your amazing feature @%%USERNAME%% ! 
-✨✨Thank you for tagging us in your work #snap_%%PAGENAME%%! ✨✨
+	<string>✨✨ CONGRATULATIONS!!! ✨✨
+🏆 You have been featured. @%%USERNAME%% 🏆
+😍 Just an amazing shot.
+💕 🎉 Thanks for tagging this great picture with #snap_%%PAGENAME%% 🙏 😃 💜
 </string>
 	<key>feature</key>
 	<string>• #snap_%%PAGENAME%% • 
@@ -20,7 +22,7 @@ Mod on @snap_%%PAGENAME%%
 .
 Join us in our fresh, creative and supportive community on VERO. Please follow @snap_community 
 .
-CC Snap Community Owner 
+CC Snap Community Owner Jane
 @snap_owner 
 .
 Please check out @snap_kingdom for more of our Snap_community pages.
@@ -28,17 +30,17 @@ Please check out @snap_kingdom for more of our Snap_community pages.
 #snap_community
 #vero 
 #verofamily 
-#verofriends 
+#verofriends  
 
-PAGE HASHTAGS 
+#picoftheday #onverofirst #photography #night_addict #createexplore #photoofday #photohunter #worldphotography #bevisuallyinspired #bnw #scenic_nature #reflection #MountainRange #nature #landscape #macro #amazingshot
 .
 .
  For internal use only!
-#snap_%%PAGENAME%%_%%USERNAME%%
-#snap_featured_%%USERNAME%%
+#snap_%%PAGENAME%%_%%USERNAME%% 
+#snap_featured_%%USERNAME%% 
 .
 </string>
 	<key>original post</key>
-	<string>✨Congratulations, you’ve been featured on @snap_%%PAGENAME%% ! ✨</string>
+	<string>✨ Featured on @snap_%%PAGENAME%% ✨ a page out of @snap_kingdom at the @snap_community</string>
 </dict>
 </plist>

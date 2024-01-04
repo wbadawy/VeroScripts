@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>comment</key>
+	<string>🎊🌠🎉Congratulations on your foggy feature @%%USERNAME%%! Amazing photography. 🌟💫🌟Keep tagging your wonderful pictures to #snap_%%PAGENAME%%!
+</string>
+	<key>feature</key>
+	<string>• #snap_%%PAGENAME%% •
+✨Featured %%MEMBERLEVEL%% : @%%USERNAME%%    ✨
+.
+__________________________________
+✨CONGRATULATIONS✨
+__________________________________
+.
+Selected by: @%%YOURNAME%% 
+Administrator on @snap_%%PAGENAME%% 
+.
+Join us in our fresh, creative and supportive community on VERO. Please follow @snap_community 
+.
+CC Snap Community Owner
+@snap_owner 
+.
+Please check out @snap_kingdom for more of our Snap_community pages.
+•
+#snap_community
+#vero
+#verofamily
+#verofriends
+#snap_community
+#vero
+#verofamily
+#verofriends
+#verofirst
+#fogphotography #foggyweather #landscapephoto #theglobewanderer #moodytones #mist_vision #landscapephotograhy #ourmoodydays #naturewonder
+.
+.
+For internal use only!
+#snap_%%PAGENAME%%_%%USERNAME%%   
+#snap_featured_%%USERNAME%%
+.
+</string>
+	<key>first comment</key>
+	<string>🎊🌠🎉Congratulations on your first foggy feature @%%USERNAME%%! Amazing photography. 🌟💫🌟Keep tagging your wonderful pictures to #snap_%%PAGENAME%%!
+</string>
+	<key>original post</key>
+	<string>✨✨✨FEATURED✨✨✨</string>
+</dict>
+</plist>

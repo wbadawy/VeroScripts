@@ -1,0 +1,50 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "comment" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "@%%USERNAME%% Congratulations on your feature today in the Snap Landscape Gallery with this amazing landscape capture! 🌟🏞👏🏞👏🏞👏🏞🌟\n"
+          }
+        }
+      }
+    },
+    "feature" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• #snap_%%PAGENAME%% • \n.\n📍 [[LOCATION]]\n.\n\n⭐️ Featured %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️\n.\n__________________________________\n✨CONGRATULATIONS ✨\n__________________________________\n.\nSelected by: @%%YOURNAME%% \nMod on @snap_%%PAGENAME%% \n.\nJoin us in our fresh, creative and supportive community on VERO. Please follow @snap_community \n•\nCC Snap Community Owner Jane\n@snap_owner \n•\nPlease check out @snap_kingdom for more of our Snap_community pages.\n•\n#snap_community\n#vero \n#verofamily \n#verofriends \n#landscape #landscape_photography #vero_landscapes #landscape_addict #landscape_aperture  #snapcommunityonvero   #beautifulview #scenicsnature\n.\n.\n.\n.\nFor internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%% \n#snap_featured_%%USERNAME%% \n.\n"
+          }
+        }
+      }
+    },
+    "first comment" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "@%%USERNAME%% Congratulations on your feature today and welcome to the Snap Landscape Gallery with this amazing landscape capture! 🌟🏞👏🏞👏🏞👏🏞🌟\n"
+          }
+        }
+      }
+    },
+    "original post" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🌟🏞🌟 Featured 🌟🏞🌟"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

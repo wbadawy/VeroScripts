@@ -3,20 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>comment</key>
-	<string>✨✨Congratulations✨✨ on your amazing feature @%%USERNAME%% ! 
-✨✨Thank you for tagging us in your work #snap_%%PAGENAME%%! ✨✨
+	<string>[[USER NAME]] @%%USERNAME%%. Thank you for sharing your [[SPECIES]] image with us. Congratulations on your feature ! 
+🕊️💯🕊️💯💯♥️🕊️
 </string>
 	<key>feature</key>
 	<string>• #snap_%%PAGENAME%% • 
 
-⭐️ Featured %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️
+⭐️ Featured %%MEMBERLEVEL%% @%%USERNAME%% ⭐️
 .
 __________________________________
 ✨CONGRATULATIONS ✨
 __________________________________
 .
 Selected by: @%%YOURNAME%% 
-Mod on @snap_%%PAGENAME%% 
+Admin for @snap_%%PAGENAME%% 
+
+Bird Species:  [[SPECIES]] 
+Location: [[LOCATION]] 
+
 .
 Join us in our fresh, creative and supportive community on VERO. Please follow @snap_community 
 .
@@ -29,16 +33,30 @@ Please check out @snap_kingdom for more of our Snap_community pages.
 #vero 
 #verofamily 
 #verofriends 
+#bird
+#bb_of_vero 
+#nature
+#wildlife
+#birds 
+#vero__bestshots
+#hubsofvero 
+#veromyphoto 
+#animalwildlife 
+#birdphotography 
+#feather_features 
+#feathers 
 
-PAGE HASHTAGS 
+#firstonvero
+#VERO
+
 .
 .
- For internal use only!
-#snap_%%PAGENAME%%_%%USERNAME%%
-#snap_featured_%%USERNAME%%
+ For internal SNAP use only!
+#snap_%%PAGENAME%%_%%USERNAME%% 
+#snap_featured_%%USERNAME%% 
 .
 </string>
 	<key>original post</key>
-	<string>✨Congratulations, you’ve been featured on @snap_%%PAGENAME%% ! ✨</string>
+	<string>✨💫Featured %%MEMBERLEVEL%%💫✨</string>
 </dict>
 </plist>

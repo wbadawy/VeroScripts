@@ -31,11 +31,15 @@ enum PageCase: String, CaseIterable, Identifiable {
     case custom = "custom",
          allTrees = "alltrees",
          beaches = "beaches",
+         birds = "birds",
          books = "books",
          canada = "canada",
+         foggy = "foggy",
+         landscape = "landscape",
          longExposure = "longexposure",
          nightShots = "nightshots",
-         people = "people"
+         people = "people",
+         potd = "potd"
     var id: Self { self }
 }
 
@@ -250,17 +254,17 @@ struct ContentView: View {
                 .replacingOccurrences(of: "%%PAGENAME%%", with: pageName)
                 .replacingOccurrences(of: "%%MEMBERLEVEL%%", with: Membership.rawValue)
                 .replacingOccurrences(of: "%%USERNAME%%", with: UserName)
-                .replacingOccurrences(of: "%%YOURNAME%%", with: UserName)
+                .replacingOccurrences(of: "%%YOURNAME%%", with: YourName)
             OriginalPostScript = originalPostScriptTemplate
                 .replacingOccurrences(of: "%%PAGENAME%%", with: pageName)
                 .replacingOccurrences(of: "%%MEMBERLEVEL%%", with: Membership.rawValue)
                 .replacingOccurrences(of: "%%USERNAME%%", with: UserName)
-                .replacingOccurrences(of: "%%YOURNAME%%", with: UserName)
+                .replacingOccurrences(of: "%%YOURNAME%%", with: YourName)
             CommentScript = commentScriptTemplate
                 .replacingOccurrences(of: "%%PAGENAME%%", with: pageName)
                 .replacingOccurrences(of: "%%MEMBERLEVEL%%", with: Membership.rawValue)
                 .replacingOccurrences(of: "%%USERNAME%%", with: UserName)
-                .replacingOccurrences(of: "%%YOURNAME%%", with: UserName)
+                .replacingOccurrences(of: "%%YOURNAME%%", with: YourName)
         }
     }
 
