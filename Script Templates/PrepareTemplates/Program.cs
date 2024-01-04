@@ -2,23 +2,18 @@
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         var cwd = Directory.GetCurrentDirectory();
-        foreach (var folder in Directory.EnumerateDirectories(cwd))
+        foreach (var folder in Directory.EnumerateDirectories(cwd).Order())
         {
             var templates = new Dictionary<string, string>();
-            if (File.Exists(Path.Combine(folder, "feature.template")))
+            Console.WriteLine("Searching {0} folder...", folder);
+            foreach (var file in Directory.EnumerateFiles(folder, "*.template").Order())
             {
-                templates.Add("feature", File.ReadAllText(Path.Combine(folder, "feature.template")));
-            }
-            if (File.Exists(Path.Combine(folder, "comment.template")))
-            {
-                templates.Add("comment", File.ReadAllText(Path.Combine(folder, "comment.template")));
-            }
-            if (File.Exists(Path.Combine(folder, "original post.template")))
-            {
-                templates.Add("original post", File.ReadAllText(Path.Combine(folder, "original post.template")));
+                var fileName = Path.GetFileNameWithoutExtension(file);
+                Console.WriteLine("\tAdding {0}...", file);
+                templates.Add(fileName, File.ReadAllText(file));
             }
             if (templates.Count != 0)
             {
@@ -27,20 +22,10 @@ class Program
                 stringDict.WriteLine("<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">");
                 stringDict.WriteLine("<plist version=\"1.0\">");
                 stringDict.WriteLine("<dict>");
-                if (templates.ContainsKey("original post"))
+                foreach (var key in templates.Keys.Order())
                 {
-                    stringDict.WriteLine("\t<key>original post</key>");
-                    stringDict.WriteLine("\t<string>{0}</string>", templates["original post"]);
-                }
-                if (templates.ContainsKey("comment"))
-                {
-                    stringDict.WriteLine("\t<key>comment</key>");
-                    stringDict.WriteLine("\t<string>{0}</string>", templates["comment"]);
-                }
-                if (templates.ContainsKey("feature"))
-                {
-                    stringDict.WriteLine("\t<key>feature</key>");
-                    stringDict.WriteLine("\t<string>{0}</string>", templates["feature"]);
+                    stringDict.WriteLine("\t<key>{0}</key>", key);
+                    stringDict.WriteLine("\t<string>{0}</string>", templates[key]);
                 }
                 stringDict.WriteLine("</dict>");
                 stringDict.WriteLine("</plist>");

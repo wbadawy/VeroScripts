@@ -2,9 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>original post</key>
-	<string>✨ Featured on @snap_%%PAGENAME%% ✨
-a page out of the @snap_kingdom at the @snap_community</string>
 	<key>comment</key>
 	<string> ✨✨ CONGRATULATIONS!!! ✨✨
 
@@ -43,5 +40,8 @@ Please check out @snap_kingdom for more of our Snap_community pages.
 .
 .
 </string>
+	<key>original post</key>
+	<string>✨ Featured on @snap_%%PAGENAME%% ✨
+a page out of the @snap_kingdom at the @snap_community</string>
 </dict>
 </plist>

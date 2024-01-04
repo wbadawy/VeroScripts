@@ -55,8 +55,9 @@ struct ContentView: View {
     @State var Membership: MembershipCase = MembershipCase.none
     @State var UserName: String = ""
     @State var YourName: String = UserDefaults.standard.string(forKey: "YourName") ?? ""
-    @State var PageName: String = UserDefaults.standard.string(forKey: "PageName") ?? ""
     @State var Page: PageCase = PageCase(rawValue: UserDefaults.standard.string(forKey: "Page") ?? PageCase.custom.rawValue) ?? PageCase.custom
+    @State var PageName: String = UserDefaults.standard.string(forKey: "PageName") ?? ""
+    @State var FirstForPage: Bool = false
     @State var FeatureScript: String = ""
     @State var CommentScript: String = ""
     @State var OriginalPostScript: String = ""
@@ -108,6 +109,9 @@ struct ContentView: View {
                     )
                     .disabled(Page != PageCase.custom)
                     .focusable(Page == PageCase.custom)
+                    Toggle(isOn: $FirstForPage.onChange(firstForPageChanged)) {
+                        Text("First feature on page")
+                    }
                 }
             }
 
@@ -116,7 +120,7 @@ struct ContentView: View {
                 HStack {
                     Text("Feature script:")
                     Button(action: {
-                        let pasteBoard = NSPasteboard.general;
+                        let pasteBoard = NSPasteboard.general
                         pasteBoard.clearContents()
                         pasteBoard.writeObjects([FeatureScript as NSString])
                     }, label: {
@@ -132,7 +136,7 @@ struct ContentView: View {
                 HStack {
                     Text("Comment script:")
                     Button(action: {
-                        let pasteBoard = NSPasteboard.general;
+                        let pasteBoard = NSPasteboard.general
                         pasteBoard.clearContents()
                         pasteBoard.writeObjects([CommentScript as NSString])
                     }, label: {
@@ -148,7 +152,7 @@ struct ContentView: View {
                 HStack {
                     Text("Original post script:")
                     Button(action: {
-                        let pasteBoard = NSPasteboard.general;
+                        let pasteBoard = NSPasteboard.general
                         pasteBoard.clearContents()
                         pasteBoard.writeObjects([OriginalPostScript as NSString])
                     }, label: {
@@ -171,7 +175,7 @@ struct ContentView: View {
                         }
                     }
                     Button(action: {
-                        let pasteBoard = NSPasteboard.general;
+                        let pasteBoard = NSPasteboard.general
                         pasteBoard.clearContents()
                         pasteBoard.writeObjects([NewMembershipScript as NSString])
                     }, label: {
@@ -212,6 +216,10 @@ struct ContentView: View {
         UserDefaults.standard.set(PageName, forKey: "PageName")
         updateScripts()
     }
+    
+    func firstForPageChanged(to value: Bool) {
+        updateScripts()
+    }
 
     func newMembershipChanged(to value: NewMembershipCase) {
         updateNewMembershipScripts()
@@ -229,14 +237,14 @@ struct ContentView: View {
             var originalPostScriptTemplate: String
             if Page == PageCase.custom {
                 pageName = PageName
-                featureScriptTemplate = getTemplate("feature", table: PageName)
-                commentScriptTemplate = getTemplate("comment", table: PageName)
-                originalPostScriptTemplate = getTemplate("original post", table: PageName)
+                featureScriptTemplate = getTemplate("feature", table: PageName, first: FirstForPage)
+                commentScriptTemplate = getTemplate("comment", table: PageName, first: FirstForPage)
+                originalPostScriptTemplate = getTemplate("original post", table: PageName, first: FirstForPage)
             } else {
                 pageName = Page.rawValue
-                featureScriptTemplate = getTemplate("feature", table: Page.rawValue)
-                commentScriptTemplate = getTemplate("comment", table: Page.rawValue)
-                originalPostScriptTemplate = getTemplate("original post", table: Page.rawValue)
+                featureScriptTemplate = getTemplate("feature", table: Page.rawValue, first: FirstForPage)
+                commentScriptTemplate = getTemplate("comment", table: Page.rawValue, first: FirstForPage)
+                originalPostScriptTemplate = getTemplate("original post", table: Page.rawValue, first: FirstForPage)
             }
             FeatureScript = featureScriptTemplate
                 .replacingOccurrences(of: "%%PAGENAME%%", with: pageName)
@@ -256,17 +264,45 @@ struct ContentView: View {
         }
     }
 
-    func getTemplate(_ templateName: String, table: String) -> String {
-        var template = String(localized: String.LocalizationValue(templateName), table: "new_" + table)
-        if (template == templateName) {
-            template = String(localized: String.LocalizationValue(templateName), table: table)
-        }
-        if (template == templateName) {
-            template = String(localized: String.LocalizationValue(templateName), table: "new_default")
-            if (template == templateName) {
-                template = String(localized: String.LocalizationValue(templateName), table: "default")
+    func getTemplate(_ templateName: String, table: String, first: Bool) -> String {
+        // If first for page
+        var template: String = templateName
+        
+        // If looking for "first" template, check for that first in the "new" string catalog.
+        if first {
+            let needle = "first " + templateName
+            template = String(localized: String.LocalizationValue(needle), table: "new_" + table)
+            if template != needle {
+                return template
             }
         }
+        
+        // Check for non-"first" template in the "new" string catalog.
+        template = String(localized: String.LocalizationValue(templateName), table: "new_" + table)
+        if template != templateName {
+            return template
+        }
+        
+        // If looking for "first" template, check for that next in the old strings dict.
+        if first {
+            let needle = "first " + templateName
+            template = String(localized: String.LocalizationValue(needle), table: table)
+            if template != needle {
+                return template
+            }
+        }
+
+        // Check for non-"first" template in the old strings dict.
+        template = String(localized: String.LocalizationValue(templateName), table: table)
+        if template != templateName {
+            return template
+        }
+        
+        // Did not find it in the table, try the default table.
+        if table != "default" {
+            template = getTemplate(templateName, table: "default", first: first)
+        }
+
         return template
     }
 

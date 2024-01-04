@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>original post</key>
-	<string>✨ Featured %%MEMBERLEVEL%% ✨</string>
 	<key>comment</key>
 	<string>CONGRATULATIONS @%%USERNAME%% on your feature with @snap_%%PAGENAME%% today!!! ✨🏆
 😍 Thank you for sharing this amazing shot with us. Keep tagging #snap_%%PAGENAME%% for a chance of more features.
@@ -51,5 +49,7 @@ For internal use only!
 #snap_featured_%%USERNAME%%
 .
 </string>
+	<key>original post</key>
+	<string>✨ Featured %%MEMBERLEVEL%% ✨</string>
 </dict>
 </plist>
