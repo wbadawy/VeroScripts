@@ -15,6 +15,16 @@
 		495CCC4E2B45E3AA00BBA415 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495CCC4D2B45E3AA00BBA415 /* ContentView.swift */; };
 		495CCC502B45E3AC00BBA415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495CCC4F2B45E3AC00BBA415 /* Assets.xcassets */; };
 		495CCC532B45E3AC00BBA415 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495CCC522B45E3AC00BBA415 /* Preview Assets.xcassets */; };
+		49D7B2B12B472EA000A61517 /* new_people.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49D7B2AF2B472EA000A61517 /* new_people.xcstrings */; };
+		49D7B2B22B472EA000A61517 /* people.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 49D7B2B02B472EA000A61517 /* people.stringsdict */; };
+		49D7B2B52B47300D00A61517 /* books.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 49D7B2B32B47300D00A61517 /* books.stringsdict */; };
+		49D7B2B62B47300D00A61517 /* new_books.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49D7B2B42B47300D00A61517 /* new_books.xcstrings */; };
+		49D7B2B92B4732C100A61517 /* new_alltrees.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49D7B2B72B4732C100A61517 /* new_alltrees.xcstrings */; };
+		49D7B2BA2B4732C100A61517 /* alltrees.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 49D7B2B82B4732C100A61517 /* alltrees.stringsdict */; };
+		49D7B2BD2B47342000A61517 /* new_beaches.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49D7B2BB2B47342000A61517 /* new_beaches.xcstrings */; };
+		49D7B2BE2B47342000A61517 /* beaches.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 49D7B2BC2B47342000A61517 /* beaches.stringsdict */; };
+		49D7B2C12B47355D00A61517 /* new_canada.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49D7B2BF2B47355D00A61517 /* new_canada.xcstrings */; };
+		49D7B2C22B47355D00A61517 /* canada.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 49D7B2C02B47355D00A61517 /* canada.stringsdict */; };
 		49E711BC2B4647EF00E02D86 /* new_longexposure.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49E711BB2B4647EF00E02D86 /* new_longexposure.xcstrings */; };
 		49E711BE2B464BCE00E02D86 /* new_default.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49E711BD2B464BCE00E02D86 /* new_default.xcstrings */; };
 /* End PBXBuildFile section */
@@ -30,6 +40,16 @@
 		495CCC4F2B45E3AC00BBA415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		495CCC522B45E3AC00BBA415 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		495CCC542B45E3AC00BBA415 /* Vero_Scripts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vero_Scripts.entitlements; sourceTree = "<group>"; };
+		49D7B2AF2B472EA000A61517 /* new_people.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; name = new_people.xcstrings; path = "Script Templates/new_people.xcstrings"; sourceTree = SOURCE_ROOT; };
+		49D7B2B02B472EA000A61517 /* people.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; name = people.stringsdict; path = "Script Templates/people.stringsdict"; sourceTree = SOURCE_ROOT; };
+		49D7B2B32B47300D00A61517 /* books.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; name = books.stringsdict; path = "Script Templates/books.stringsdict"; sourceTree = SOURCE_ROOT; };
+		49D7B2B42B47300D00A61517 /* new_books.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; name = new_books.xcstrings; path = "Script Templates/new_books.xcstrings"; sourceTree = SOURCE_ROOT; };
+		49D7B2B72B4732C100A61517 /* new_alltrees.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; name = new_alltrees.xcstrings; path = "Script Templates/new_alltrees.xcstrings"; sourceTree = SOURCE_ROOT; };
+		49D7B2B82B4732C100A61517 /* alltrees.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; name = alltrees.stringsdict; path = "Script Templates/alltrees.stringsdict"; sourceTree = SOURCE_ROOT; };
+		49D7B2BB2B47342000A61517 /* new_beaches.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; name = new_beaches.xcstrings; path = "Script Templates/new_beaches.xcstrings"; sourceTree = SOURCE_ROOT; };
+		49D7B2BC2B47342000A61517 /* beaches.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; name = beaches.stringsdict; path = "Script Templates/beaches.stringsdict"; sourceTree = SOURCE_ROOT; };
+		49D7B2BF2B47355D00A61517 /* new_canada.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; name = new_canada.xcstrings; path = "Script Templates/new_canada.xcstrings"; sourceTree = SOURCE_ROOT; };
+		49D7B2C02B47355D00A61517 /* canada.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; name = canada.stringsdict; path = "Script Templates/canada.stringsdict"; sourceTree = SOURCE_ROOT; };
 		49E711BB2B4647EF00E02D86 /* new_longexposure.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = new_longexposure.xcstrings; sourceTree = "<group>"; };
 		49E711BD2B464BCE00E02D86 /* new_default.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = new_default.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,12 +89,22 @@
 				495CCC4F2B45E3AC00BBA415 /* Assets.xcassets */,
 				495CCC542B45E3AC00BBA415 /* Vero_Scripts.entitlements */,
 				495CCC512B45E3AC00BBA415 /* Preview Content */,
+				49D7B2B72B4732C100A61517 /* new_alltrees.xcstrings */,
+				49D7B2B82B4732C100A61517 /* alltrees.stringsdict */,
+				49D7B2BB2B47342000A61517 /* new_beaches.xcstrings */,
+				49D7B2BC2B47342000A61517 /* beaches.stringsdict */,
+				49D7B2B42B47300D00A61517 /* new_books.xcstrings */,
+				49D7B2B32B47300D00A61517 /* books.stringsdict */,
+				49D7B2BF2B47355D00A61517 /* new_canada.xcstrings */,
+				49D7B2C02B47355D00A61517 /* canada.stringsdict */,
 				49E711BD2B464BCE00E02D86 /* new_default.xcstrings */,
-				49E711BB2B4647EF00E02D86 /* new_longexposure.xcstrings */,
-				490994F42B4721C70083FA8E /* new_nightshots.xcstrings */,
 				492BDAA22B46FC73001A6C52 /* default.stringsdict */,
+				49E711BB2B4647EF00E02D86 /* new_longexposure.xcstrings */,
 				492BDAA02B46F9BF001A6C52 /* longexposure.stringsdict */,
+				490994F42B4721C70083FA8E /* new_nightshots.xcstrings */,
 				490994F52B4721C70083FA8E /* nightshots.stringsdict */,
+				49D7B2AF2B472EA000A61517 /* new_people.xcstrings */,
+				49D7B2B02B472EA000A61517 /* people.stringsdict */,
 			);
 			path = "Vero Scripts";
 			sourceTree = "<group>";
@@ -146,12 +176,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				490994F62B4721C80083FA8E /* new_nightshots.xcstrings in Resources */,
+				49D7B2B62B47300D00A61517 /* new_books.xcstrings in Resources */,
+				49D7B2B22B472EA000A61517 /* people.stringsdict in Resources */,
 				492BDAA32B46FC73001A6C52 /* default.stringsdict in Resources */,
+				49D7B2C22B47355D00A61517 /* canada.stringsdict in Resources */,
 				492BDAA12B46F9BF001A6C52 /* longexposure.stringsdict in Resources */,
 				495CCC532B45E3AC00BBA415 /* Preview Assets.xcassets in Resources */,
+				49D7B2B12B472EA000A61517 /* new_people.xcstrings in Resources */,
+				49D7B2B92B4732C100A61517 /* new_alltrees.xcstrings in Resources */,
 				49E711BE2B464BCE00E02D86 /* new_default.xcstrings in Resources */,
 				490994F72B4721C80083FA8E /* nightshots.stringsdict in Resources */,
+				49D7B2BE2B47342000A61517 /* beaches.stringsdict in Resources */,
+				49D7B2BA2B4732C100A61517 /* alltrees.stringsdict in Resources */,
+				49D7B2C12B47355D00A61517 /* new_canada.xcstrings in Resources */,
 				495CCC502B45E3AC00BBA415 /* Assets.xcassets in Resources */,
+				49D7B2BD2B47342000A61517 /* new_beaches.xcstrings in Resources */,
+				49D7B2B52B47300D00A61517 /* books.stringsdict in Resources */,
 				49E711BC2B4647EF00E02D86 /* new_longexposure.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

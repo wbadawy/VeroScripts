@@ -10,7 +10,7 @@ import SwiftUI
 enum MembershipCase: String, CaseIterable, Identifiable {
     case none = "None",
          artist = "Artist",
-         member = "Member", 
+         member = "Member",
          vipMember = "VIP Member",
          goldMember = "VIP Gold Member",
          platinumMember = "Platinum Member",
@@ -29,8 +29,13 @@ enum NewMembershipCase: String, CaseIterable, Identifiable {
 
 enum PageCase: String, CaseIterable, Identifiable {
     case custom = "custom",
+         allTrees = "alltrees",
+         beaches = "beaches",
+         books = "books",
+         canada = "canada",
          longExposure = "longexposure",
-         nightShots = "nightshots"
+         nightShots = "nightshots",
+         people = "people"
     var id: Self { self }
 }
 
@@ -70,7 +75,7 @@ struct ContentView: View {
                         text: $UserName.onChange(userNameChanged)
                     )
                 }
-            
+
                 // User level picker
                 Picker("Level: ", selection: $Membership.onChange(membershipChanged)) {
                     ForEach(MembershipCase.allCases) { level in
@@ -78,7 +83,7 @@ struct ContentView: View {
                     }
                 }
                 .focusable()
-            
+
                 // Your name editor
                 HStack {
                     Text("You: ")
@@ -88,7 +93,7 @@ struct ContentView: View {
                         text: $YourName.onChange(yourNameChanged)
                     )
                 }
-            
+
                 // Page name editor
                 HStack {
                     Picker("Page: ", selection: $Page.onChange(pageChanged)) {
@@ -122,7 +127,7 @@ struct ContentView: View {
                 .frame(alignment: .leading)
                 TextEditor(text: $FeatureScript)
                     .frame(minWidth: 400, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: 200)
-                
+
                 // Comment script output
                 HStack {
                     Text("Comment script:")
@@ -138,7 +143,7 @@ struct ContentView: View {
                 .frame(alignment: .leading)
                 TextEditor(text: $CommentScript)
                     .frame(minWidth: 200, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: 80)
-                
+
                 // Original post script output
                 HStack {
                     Text("Original post script:")
@@ -155,7 +160,7 @@ struct ContentView: View {
                 TextEditor(text: $OriginalPostScript)
                     .frame(minWidth: 200, maxWidth: .infinity, minHeight: 80)
             }
-            
+
             Group {
                 // New membership picker and script output
                 HStack {
@@ -183,35 +188,35 @@ struct ContentView: View {
         .frame(minWidth: 1024, minHeight: 1100)
         .textFieldStyle(.roundedBorder)
     }
-    
+
     func membershipChanged(to value: MembershipCase) {
         updateScripts()
     }
-    
+
     func userNameChanged(to value: String) {
         updateScripts()
         updateNewMembershipScripts()
     }
-    
+
     func yourNameChanged(to value: String) {
         UserDefaults.standard.set(YourName, forKey: "YourName")
         updateScripts()
     }
-    
+
     func pageChanged(to value: PageCase) {
         UserDefaults.standard.set(Page.rawValue, forKey: "Page")
         updateScripts()
     }
-    
+
     func pageNameChanged(to value: String) {
         UserDefaults.standard.set(PageName, forKey: "PageName")
         updateScripts()
     }
-    
+
     func newMembershipChanged(to value: NewMembershipCase) {
         updateNewMembershipScripts()
     }
-    
+
     func updateScripts() -> Void {
         if Membership == MembershipCase.none || UserName.isEmpty || YourName.isEmpty || (Page == PageCase.custom && PageName.isEmpty) {
             FeatureScript = ""
@@ -250,7 +255,7 @@ struct ContentView: View {
                 .replacingOccurrences(of: "%%YOURNAME%%", with: UserName)
         }
     }
-    
+
     func getTemplate(_ templateName: String, table: String) -> String {
         var template = String(localized: String.LocalizationValue(templateName), table: "new_" + table)
         if (template == templateName) {
@@ -264,12 +269,12 @@ struct ContentView: View {
         }
         return template
     }
-    
+
     func updateNewMembershipScripts() -> Void {
         if NewMembership == NewMembershipCase.none || UserName == "" {
             NewMembershipScript = ""
         } else if NewMembership == NewMembershipCase.member {
-            NewMembershipScript = 
+            NewMembershipScript =
                 "Congratulations @" + UserName + " on your 5th feature!\n" +
                 "\n" +
                 "I took the time to check the number of features you have with the SNAP Community and wanted to share with you that you are now a Member of the SNAP Community!\n" +
@@ -278,7 +283,7 @@ struct ContentView: View {
                 "\n" +
                 "Please consider adding ✨ SNAP Community Member ✨ to your bio it will give you the chance to be featured in any raw page using only the membership tag.\n"
         } else if NewMembership == NewMembershipCase.vipMember {
-            NewMembershipScript = 
+            NewMembershipScript =
                 "Congratulations @" + UserName + " on your 15th feature!\n" +
                 "\n" +
                 "I took the time to check the number of features you have with the SNAP Community and wanted to share that you are now a VIP Member of the SNAP Community!\n" +

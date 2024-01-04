@@ -1,0 +1,39 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "comment" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🎉 @%%USERNAME%% 👏💕💫 A wonderful portrait. Congratulations on your feature with @snap_%%PAGENAME%% today. Thank you for using our hashtag. Keep tagging #snap_%%PAGENAME%% or #snap_portrait for a chance of more features. 👍💙🎉\n"
+          }
+        }
+      }
+    },
+    "feature" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• #snap_%%PAGENAME%%\n.\n✨ Featured Snap %%MEMBERLEVEL%%: @%%USERNAME%% ✨\n.\n__________________________________\n✨CONGRATULATIONS ✨\n__________________________________\n•\nSelected by: @%%YOURNAME%% \nAdmin on @snap_%%PAGENAME%% \n•\nJoin us in our fresh, creative and supportive community on VERO. Please follow @snap_community \n•\nCC Snap Community Owner Jane\n@snap_owner \n•\nPlease check out @snap_kingdom for more of our Snap_community pages.\n•\n#snap_community\n#vero \n#verofamily \n#verofriends \n#portraits_community \n#great_captures_people \n#portrait_captures\n#pursuitofportraits \n#portraitgames \n#pictasportrait \n#podium_portraits \n#postthepeople \n#makeportraits \n#portraitpage\n#portraitvision \n#theportraitpr0ject \n#portraitstream \n#earth_portraits \n#portraitphotography\n•\n•\n For internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%% \n#snap_featured_%%USERNAME%%  \n•\n"
+          }
+        }
+      }
+    },
+    "original post" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "💫 Snap Community %%MEMBERLEVEL%% feature 💫"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
