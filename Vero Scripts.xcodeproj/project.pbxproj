@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		490994F62B4721C80083FA8E /* new_nightshots.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 490994F42B4721C70083FA8E /* new_nightshots.xcstrings */; };
+		490994F72B4721C80083FA8E /* nightshots.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 490994F52B4721C70083FA8E /* nightshots.stringsdict */; };
+		492BDAA12B46F9BF001A6C52 /* longexposure.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 492BDAA02B46F9BF001A6C52 /* longexposure.stringsdict */; };
+		492BDAA32B46FC73001A6C52 /* default.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 492BDAA22B46FC73001A6C52 /* default.stringsdict */; };
+		495CCC4C2B45E3AA00BBA415 /* Vero_ScriptsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495CCC4B2B45E3AA00BBA415 /* Vero_ScriptsApp.swift */; };
+		495CCC4E2B45E3AA00BBA415 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495CCC4D2B45E3AA00BBA415 /* ContentView.swift */; };
+		495CCC502B45E3AC00BBA415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495CCC4F2B45E3AC00BBA415 /* Assets.xcassets */; };
+		495CCC532B45E3AC00BBA415 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495CCC522B45E3AC00BBA415 /* Preview Assets.xcassets */; };
+		49E711BC2B4647EF00E02D86 /* new_longexposure.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49E711BB2B4647EF00E02D86 /* new_longexposure.xcstrings */; };
+		49E711BE2B464BCE00E02D86 /* new_default.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49E711BD2B464BCE00E02D86 /* new_default.xcstrings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		490994F42B4721C70083FA8E /* new_nightshots.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = new_nightshots.xcstrings; sourceTree = "<group>"; };
+		490994F52B4721C70083FA8E /* nightshots.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; path = nightshots.stringsdict; sourceTree = "<group>"; };
+		492BDAA02B46F9BF001A6C52 /* longexposure.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = longexposure.stringsdict; sourceTree = "<group>"; };
+		492BDAA22B46FC73001A6C52 /* default.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = default.stringsdict; sourceTree = "<group>"; };
+		495CCC482B45E3AA00BBA415 /* Vero Scripts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vero Scripts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		495CCC4B2B45E3AA00BBA415 /* Vero_ScriptsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vero_ScriptsApp.swift; sourceTree = "<group>"; };
+		495CCC4D2B45E3AA00BBA415 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		495CCC4F2B45E3AC00BBA415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		495CCC522B45E3AC00BBA415 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		495CCC542B45E3AC00BBA415 /* Vero_Scripts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vero_Scripts.entitlements; sourceTree = "<group>"; };
+		49E711BB2B4647EF00E02D86 /* new_longexposure.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = new_longexposure.xcstrings; sourceTree = "<group>"; };
+		49E711BD2B464BCE00E02D86 /* new_default.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = new_default.xcstrings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		495CCC452B45E3AA00BBA415 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		495CCC3F2B45E3AA00BBA415 = {
+			isa = PBXGroup;
+			children = (
+				495CCC4A2B45E3AA00BBA415 /* Vero Scripts */,
+				495CCC492B45E3AA00BBA415 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		495CCC492B45E3AA00BBA415 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				495CCC482B45E3AA00BBA415 /* Vero Scripts.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		495CCC4A2B45E3AA00BBA415 /* Vero Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				495CCC4B2B45E3AA00BBA415 /* Vero_ScriptsApp.swift */,
+				495CCC4D2B45E3AA00BBA415 /* ContentView.swift */,
+				495CCC4F2B45E3AC00BBA415 /* Assets.xcassets */,
+				495CCC542B45E3AC00BBA415 /* Vero_Scripts.entitlements */,
+				495CCC512B45E3AC00BBA415 /* Preview Content */,
+				49E711BD2B464BCE00E02D86 /* new_default.xcstrings */,
+				49E711BB2B4647EF00E02D86 /* new_longexposure.xcstrings */,
+				490994F42B4721C70083FA8E /* new_nightshots.xcstrings */,
+				492BDAA22B46FC73001A6C52 /* default.stringsdict */,
+				492BDAA02B46F9BF001A6C52 /* longexposure.stringsdict */,
+				490994F52B4721C70083FA8E /* nightshots.stringsdict */,
+			);
+			path = "Vero Scripts";
+			sourceTree = "<group>";
+		};
+		495CCC512B45E3AC00BBA415 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				495CCC522B45E3AC00BBA415 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		495CCC472B45E3AA00BBA415 /* Vero Scripts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 495CCC572B45E3AC00BBA415 /* Build configuration list for PBXNativeTarget "Vero Scripts" */;
+			buildPhases = (
+				495CCC442B45E3AA00BBA415 /* Sources */,
+				495CCC452B45E3AA00BBA415 /* Frameworks */,
+				495CCC462B45E3AA00BBA415 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vero Scripts";
+			productName = "Vero Scripts";
+			productReference = 495CCC482B45E3AA00BBA415 /* Vero Scripts.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		495CCC402B45E3AA00BBA415 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					495CCC472B45E3AA00BBA415 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = 495CCC432B45E3AA00BBA415 /* Build configuration list for PBXProject "Vero Scripts" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 495CCC3F2B45E3AA00BBA415;
+			productRefGroup = 495CCC492B45E3AA00BBA415 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				495CCC472B45E3AA00BBA415 /* Vero Scripts */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		495CCC462B45E3AA00BBA415 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				490994F62B4721C80083FA8E /* new_nightshots.xcstrings in Resources */,
+				492BDAA32B46FC73001A6C52 /* default.stringsdict in Resources */,
+				492BDAA12B46F9BF001A6C52 /* longexposure.stringsdict in Resources */,
+				495CCC532B45E3AC00BBA415 /* Preview Assets.xcassets in Resources */,
+				49E711BE2B464BCE00E02D86 /* new_default.xcstrings in Resources */,
+				490994F72B4721C80083FA8E /* nightshots.stringsdict in Resources */,
+				495CCC502B45E3AC00BBA415 /* Assets.xcassets in Resources */,
+				49E711BC2B4647EF00E02D86 /* new_longexposure.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		495CCC442B45E3AA00BBA415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				495CCC4E2B45E3AA00BBA415 /* ContentView.swift in Sources */,
+				495CCC4C2B45E3AA00BBA415 /* Vero_ScriptsApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		495CCC552B45E3AC00BBA415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		495CCC562B45E3AC00BBA415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		495CCC582B45E3AC00BBA415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Vero Scripts/Vero_Scripts.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Vero Scripts/Preview Content\"";
+				DEVELOPMENT_TEAM = 7U6K972H9Q;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andydragon.Vero-Scripts";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		495CCC592B45E3AC00BBA415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "Vero Scripts/Vero_Scripts.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Vero Scripts/Preview Content\"";
+				DEVELOPMENT_TEAM = 7U6K972H9Q;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andydragon.Vero-Scripts";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		495CCC432B45E3AA00BBA415 /* Build configuration list for PBXProject "Vero Scripts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				495CCC552B45E3AC00BBA415 /* Debug */,
+				495CCC562B45E3AC00BBA415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		495CCC572B45E3AC00BBA415 /* Build configuration list for PBXNativeTarget "Vero Scripts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				495CCC582B45E3AC00BBA415 /* Debug */,
+				495CCC592B45E3AC00BBA415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 495CCC402B45E3AA00BBA415 /* Project object */;
+}
