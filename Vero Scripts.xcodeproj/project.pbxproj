@@ -33,6 +33,12 @@
 		49D7B2C82B4754A600A61517 /* foggy.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 49D7B2C42B4754A600A61517 /* foggy.stringsdict */; };
 		49D7B2C92B4754A600A61517 /* new_foggy.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49D7B2C52B4754A600A61517 /* new_foggy.xcstrings */; };
 		49D7B2CA2B4754A600A61517 /* potd.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 49D7B2C62B4754A600A61517 /* potd.stringsdict */; };
+		49DF756E2B477020004F0EAE /* skies.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 49DF756A2B477020004F0EAE /* skies.stringsdict */; };
+		49DF756F2B477020004F0EAE /* new_skies.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49DF756B2B477020004F0EAE /* new_skies.xcstrings */; };
+		49DF75702B477020004F0EAE /* new_reflection.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49DF756C2B477020004F0EAE /* new_reflection.xcstrings */; };
+		49DF75712B477020004F0EAE /* reflection.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 49DF756D2B477020004F0EAE /* reflection.stringsdict */; };
+		49DF75742B4771FC004F0EAE /* new_usa.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49DF75722B4771FB004F0EAE /* new_usa.xcstrings */; };
+		49DF75752B4771FC004F0EAE /* usa.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 49DF75732B4771FB004F0EAE /* usa.stringsdict */; };
 		49E711BC2B4647EF00E02D86 /* new_longexposure.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49E711BB2B4647EF00E02D86 /* new_longexposure.xcstrings */; };
 		49E711BE2B464BCE00E02D86 /* new_default.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 49E711BD2B464BCE00E02D86 /* new_default.xcstrings */; };
 /* End PBXBuildFile section */
@@ -66,6 +72,12 @@
 		49D7B2C42B4754A600A61517 /* foggy.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; name = foggy.stringsdict; path = "Script Templates/foggy.stringsdict"; sourceTree = SOURCE_ROOT; };
 		49D7B2C52B4754A600A61517 /* new_foggy.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; name = new_foggy.xcstrings; path = "Script Templates/new_foggy.xcstrings"; sourceTree = SOURCE_ROOT; };
 		49D7B2C62B4754A600A61517 /* potd.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; name = potd.stringsdict; path = "Script Templates/potd.stringsdict"; sourceTree = SOURCE_ROOT; };
+		49DF756A2B477020004F0EAE /* skies.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; path = skies.stringsdict; sourceTree = "<group>"; };
+		49DF756B2B477020004F0EAE /* new_skies.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = new_skies.xcstrings; sourceTree = "<group>"; };
+		49DF756C2B477020004F0EAE /* new_reflection.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = new_reflection.xcstrings; sourceTree = "<group>"; };
+		49DF756D2B477020004F0EAE /* reflection.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; path = reflection.stringsdict; sourceTree = "<group>"; };
+		49DF75722B4771FB004F0EAE /* new_usa.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = new_usa.xcstrings; sourceTree = "<group>"; };
+		49DF75732B4771FB004F0EAE /* usa.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; path = usa.stringsdict; sourceTree = "<group>"; };
 		49E711BB2B4647EF00E02D86 /* new_longexposure.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = new_longexposure.xcstrings; sourceTree = "<group>"; };
 		49E711BD2B464BCE00E02D86 /* new_default.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = new_default.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +157,12 @@
 				49D7B2B02B472EA000A61517 /* people.stringsdict */,
 				49D7B2C32B4754A600A61517 /* new_potd.xcstrings */,
 				49D7B2C62B4754A600A61517 /* potd.stringsdict */,
+				49DF756C2B477020004F0EAE /* new_reflection.xcstrings */,
+				49DF756D2B477020004F0EAE /* reflection.stringsdict */,
+				49DF756B2B477020004F0EAE /* new_skies.xcstrings */,
+				49DF756A2B477020004F0EAE /* skies.stringsdict */,
+				49DF75722B4771FB004F0EAE /* new_usa.xcstrings */,
+				49DF75732B4771FB004F0EAE /* usa.stringsdict */,
 			);
 			name = "String Resources";
 			sourceTree = "<group>";
@@ -208,8 +226,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				490994F62B4721C80083FA8E /* new_nightshots.xcstrings in Resources */,
+				49DF756E2B477020004F0EAE /* skies.stringsdict in Resources */,
+				49DF756F2B477020004F0EAE /* new_skies.xcstrings in Resources */,
+				49DF75742B4771FC004F0EAE /* new_usa.xcstrings in Resources */,
 				49D7B2C92B4754A600A61517 /* new_foggy.xcstrings in Resources */,
 				49D7B2B62B47300D00A61517 /* new_books.xcstrings in Resources */,
+				49DF75702B477020004F0EAE /* new_reflection.xcstrings in Resources */,
 				49D7B2B22B472EA000A61517 /* people.stringsdict in Resources */,
 				492BDAA32B46FC73001A6C52 /* default.stringsdict in Resources */,
 				49D7B2C22B47355D00A61517 /* canada.stringsdict in Resources */,
@@ -223,10 +245,12 @@
 				497298602B4759890041AB52 /* new_birds.xcstrings in Resources */,
 				49D7B2B92B4732C100A61517 /* new_alltrees.xcstrings in Resources */,
 				49E711BE2B464BCE00E02D86 /* new_default.xcstrings in Resources */,
+				49DF75752B4771FC004F0EAE /* usa.stringsdict in Resources */,
 				490994F72B4721C80083FA8E /* nightshots.stringsdict in Resources */,
 				49D7B2C72B4754A600A61517 /* new_potd.xcstrings in Resources */,
 				49D7B2BE2B47342000A61517 /* beaches.stringsdict in Resources */,
 				49D7B2BA2B4732C100A61517 /* alltrees.stringsdict in Resources */,
+				49DF75712B477020004F0EAE /* reflection.stringsdict in Resources */,
 				49D7B2C12B47355D00A61517 /* new_canada.xcstrings in Resources */,
 				495CCC502B45E3AC00BBA415 /* Assets.xcassets in Resources */,
 				49D7B2BD2B47342000A61517 /* new_beaches.xcstrings in Resources */,
@@ -376,6 +400,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Vero Scripts/Vero_Scripts.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -406,6 +431,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Vero Scripts/Vero_Scripts.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

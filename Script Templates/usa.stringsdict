@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>comment</key>
+	<string>🏆 Congratulations on your Snap Member feature, @%%USERNAME%% 
+It’s wonderful to see your photo in our gallery! Thanks for sharing it with us and Keep Tagging: #snap_%%PAGENAME%% 
+We look forward to seeing most of your work!! ❤️🤍💙
+</string>
+	<key>feature</key>
+	<string>• #snap_%%PAGENAME%% • 
+.
+✨ [[DESCRIPTION]] ✨️
+.
+⭐️ Featured Snap %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️
+.
+__________________________________
+✨CONGRATULATIONS ✨
+__________________________________
+.
+Selected by: @%%YOURNAME%% 
+Mod for @snap_%%PAGENAME%% 
+.
+Join us in our fresh, creative and supportive community on Vero. Please follow @snap_community 
+.
+CC Snap Community Owner Jane
+@snap_owner 
+.
+Please check out @snap_kingdom for more of our Snap_community pages.
+•
+
+
+ 
+.
+#Usa #Photography #exploring #outdoors #captures #LensCulture #globalcapture #Travel #mood #roamtheplanet #picoftheday 
+#Nature #tree #ecosystem #BodyOfWater #Sky #Cloud #ScenicsNature #coastal_landscape #florida 
+.
+.
+For internal use only!
+#snap_%%PAGENAME%%_%%USERNAME%%
+#snap_featured_%%USERNAME%%
+.   
+</string>
+</dict>
+</plist>

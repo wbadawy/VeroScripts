@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>comment</key>
+	<string>✨✨ CONGRATULATIONS!!! ✨✨
+  Congratulations on your feature with the @snap_community, 
+ Thank you so much for tagging this great photo with #snap_%%PAGENAME%%
+ </string>
+	<key>feature</key>
+	<string>• #snap_%%PAGENAME%% • 
+
+⭐️ Featured %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️
+.
+__________________________________
+✨CONGRATULATIONS ✨
+__________________________________
+.
+Selected by: @%%YOURNAME%% 
+Mod on @snap_%%PAGENAME%% 
+.
+Join us in our fresh, creative and supportive community on VERO. Please follow @snap_community 
+.
+CC Snap Community Owner 
+@snap_owner 
+.
+Please check out @snap_kingdom for more of our Snap_community pages.
+•
+#snap_community
+#vero 
+#verofamily 
+#reflections #reflectionphoto #reflectionphotos #reflectionperfection #reflection_addict #mirror #beautifulphotography #beautifulphoto #photooftheday #bestofthe_world #amazingshot #worthafollow #verofriends #verotography
+
+.
+ For internal use only!
+#snap_%%PAGENAME%%_%%USERNAME%%
+#snap_featured_%%USERNAME%%.
+.
+</string>
+</dict>
+</plist>

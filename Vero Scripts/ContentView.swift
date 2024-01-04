@@ -39,7 +39,10 @@ enum PageCase: String, CaseIterable, Identifiable {
          longExposure = "longexposure",
          nightShots = "nightshots",
          people = "people",
-         potd = "potd"
+         potd = "potd",
+         reflection = "reflection",
+         skies = "skies",
+         usa = "usa"
     var id: Self { self }
 }
 
