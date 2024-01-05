@@ -5,7 +5,7 @@
 	<key>comment</key>
 	<string>✨✨ CONGRATULATIONS!!! @%%USERNAME%% ✨✨
  You have been featured as part of the @snap_community 
-Fantastic photo,  💫💫 Thanks for tagging this great picture with #snap_%%PAGENAME%%
+Fantastic shot,  💫💫 Thanks for tagging this great picture with #snap_%%PAGENAME%%
 </string>
 	<key>feature</key>
 	<string>• #snap_%%PAGENAME%%• 
@@ -17,9 +17,9 @@ __________________________________
 __________________________________
 .
 Selected by: @%%YOURNAME%%
-Mod on @snap_%%PAGENAME%%
+%%STAFFLEVEL%% on @snap_%%PAGENAME%%
 .
-Join us in our fresh, creative and supportive community on VERO. Please follow @snap_community 
+Join us in our fresh, creative and supportive community on Instagram. Please follow @snap_community 
 .
 CC Snap Community Owner 
 @snap_owner
@@ -43,5 +43,8 @@ Please check out @snap_kingdom for more of our Snap_community pages.
 #snap_featured_%%USERNAME%%
 .
 </string>
+	<key>original post</key>
+	<string>✨✨ Congratulations
+   Featured @snap_%%PAGENAME%% ✨✨</string>
 </dict>
 </plist>

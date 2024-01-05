@@ -5,12 +5,12 @@
 	<key>comment</key>
 	<string>🏆 Congratulations on your Snap Member feature, @%%USERNAME%% 
 It’s wonderful to see your photo in our gallery! Thanks for sharing it with us and Keep Tagging: #snap_%%PAGENAME%% 
-We look forward to seeing most of your work!! ❤️🤍💙
+We look forward to seeing more of your work!! ❤️🤍💙
 </string>
 	<key>feature</key>
 	<string>• #snap_%%PAGENAME%% • 
 .
-✨ [[DESCRIPTION]] ✨️
+✨ [[LOCATION]] ✨️
 .
 ⭐️ Featured Snap %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️
 .
@@ -19,21 +19,19 @@ __________________________________
 __________________________________
 .
 Selected by: @%%YOURNAME%% 
-Mod for @snap_%%PAGENAME%% 
+%%STAFFLEVEL%% for @snap_%%PAGENAME%% 
 .
 Join us in our fresh, creative and supportive community on Vero. Please follow @snap_community 
 .
 CC Snap Community Owner Jane
 @snap_owner 
 .
-Please check out @snap_kingdom for more of our Snap_community pages.
+Please check out @ snap_kingdom for more of our Snap_community pages
+
+
 •
+#Usa #Photography #exploring #outdoors #captures #adventure #wanderlust #global_capture #Travel #mood #roamtheplanet #photographerlife 
 
-
- 
-.
-#Usa #Photography #exploring #outdoors #captures #LensCulture #globalcapture #Travel #mood #roamtheplanet #picoftheday 
-#Nature #tree #ecosystem #BodyOfWater #Sky #Cloud #ScenicsNature #coastal_landscape #florida 
 .
 .
 For internal use only!
@@ -41,5 +39,7 @@ For internal use only!
 #snap_featured_%%USERNAME%%
 .   
 </string>
+	<key>original post</key>
+	<string>✨Featured ..Snap %%MEMBERLEVEL%% ❤️</string>
 </dict>
 </plist>

@@ -27,6 +27,12 @@ enum NewMembershipCase: String, CaseIterable, Identifiable {
     var id: Self { self }
 }
 
+enum StaffLevelCase: String, CaseIterable, Identifiable {
+    case mod = "Mod",
+         admin = "Admin"
+    var id: Self { self }
+}
+
 enum PageCase: String, CaseIterable, Identifiable {
     case custom = "custom",
          allTrees = "alltrees",
@@ -64,6 +70,7 @@ struct ContentView: View {
     @State var YourName: String = UserDefaults.standard.string(forKey: "YourName") ?? ""
     @State var Page: PageCase = PageCase(rawValue: UserDefaults.standard.string(forKey: "Page") ?? PageCase.custom.rawValue) ?? PageCase.custom
     @State var PageName: String = UserDefaults.standard.string(forKey: "PageName") ?? ""
+    @State var PageStaffLevel: StaffLevelCase = StaffLevelCase(rawValue: UserDefaults.standard.string(forKey: "StaffLevel") ?? StaffLevelCase.mod.rawValue) ?? StaffLevelCase.mod
     @State var FirstForPage: Bool = false
     @State var FeatureScript: String = ""
     @State var CommentScript: String = ""
@@ -116,9 +123,16 @@ struct ContentView: View {
                     )
                     .disabled(Page != PageCase.custom)
                     .focusable(Page == PageCase.custom)
+                    Picker("Page staff level: ", selection: $PageStaffLevel.onChange(pageStaffLevelChanged)) {
+                        ForEach(StaffLevelCase.allCases) { staffLevelCase in
+                            Text(staffLevelCase.rawValue).tag(staffLevelCase)
+                        }
+                    }
+                    .focusable()
                     Toggle(isOn: $FirstForPage.onChange(firstForPageChanged)) {
                         Text("First feature on page")
                     }
+                    .focusable()
                 }
             }
 
@@ -224,6 +238,11 @@ struct ContentView: View {
         updateScripts()
     }
     
+    func pageStaffLevelChanged(to value: StaffLevelCase) {
+        UserDefaults.standard.set(PageStaffLevel.rawValue, forKey: "StaffLevel")
+        updateScripts()
+    }
+    
     func firstForPageChanged(to value: Bool) {
         updateScripts()
     }
@@ -258,16 +277,19 @@ struct ContentView: View {
                 .replacingOccurrences(of: "%%MEMBERLEVEL%%", with: Membership.rawValue)
                 .replacingOccurrences(of: "%%USERNAME%%", with: UserName)
                 .replacingOccurrences(of: "%%YOURNAME%%", with: YourName)
+                .replacingOccurrences(of: "%%STAFFLEVEL%%", with: PageStaffLevel.rawValue)
             OriginalPostScript = originalPostScriptTemplate
                 .replacingOccurrences(of: "%%PAGENAME%%", with: pageName)
                 .replacingOccurrences(of: "%%MEMBERLEVEL%%", with: Membership.rawValue)
                 .replacingOccurrences(of: "%%USERNAME%%", with: UserName)
                 .replacingOccurrences(of: "%%YOURNAME%%", with: YourName)
+                .replacingOccurrences(of: "%%STAFFLEVEL%%", with: PageStaffLevel.rawValue)
             CommentScript = commentScriptTemplate
                 .replacingOccurrences(of: "%%PAGENAME%%", with: pageName)
                 .replacingOccurrences(of: "%%MEMBERLEVEL%%", with: Membership.rawValue)
                 .replacingOccurrences(of: "%%USERNAME%%", with: UserName)
                 .replacingOccurrences(of: "%%YOURNAME%%", with: YourName)
+                .replacingOccurrences(of: "%%STAFFLEVEL%%", with: PageStaffLevel.rawValue)
         }
     }
 

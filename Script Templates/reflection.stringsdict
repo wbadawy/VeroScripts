@@ -4,11 +4,13 @@
 <dict>
 	<key>comment</key>
 	<string>✨✨ CONGRATULATIONS!!! ✨✨
-  Congratulations on your feature with the @snap_community, 
- Thank you so much for tagging this great photo with #snap_%%PAGENAME%%
- </string>
+[[ARTIST NAME]]: You have been featured as part of the @snap_community 
+[[write individual comment to represent photo featured]]
+Thank you for tagging this great photo with #snap_%%PAGENAME%%
+</string>
 	<key>feature</key>
 	<string>• #snap_%%PAGENAME%% • 
+. #snap_reflection_bnw
 
 ⭐️ Featured %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️
 .
@@ -17,9 +19,9 @@ __________________________________
 __________________________________
 .
 Selected by: @%%YOURNAME%% 
-Mod on @snap_%%PAGENAME%% 
+%%STAFFLEVEL%% on @snap_%%PAGENAME%% 
 .
-Join us in our fresh, creative and supportive community on VERO. Please follow @snap_community 
+Join us in our fresh, creative and supportive community on Instagram. Please follow @snap_community 
 .
 CC Snap Community Owner 
 @snap_owner 
@@ -37,5 +39,8 @@ Please check out @snap_kingdom for more of our Snap_community pages.
 #snap_featured_%%USERNAME%%.
 .
 </string>
+	<key>original post</key>
+	<string>✨ Featured by @snap_%%PAGENAME%% ✨
+a page out of the @snap_kingdom at the @snap_community</string>
 </dict>
 </plist>
