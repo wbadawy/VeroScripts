@@ -64,6 +64,20 @@ extension Binding {
     }
 }
 
+func matches(of regex: String, in text: String) -> [String] {
+    do {
+        let regex = try NSRegularExpression(pattern: regex)
+        let results = regex.matches(in: text,
+                                    range: NSRange(text.startIndex..., in: text))
+        return results.map {
+            String(text[Range($0.range, in: text)!])
+        }
+    } catch let error {
+        print("invalid regex: \(error.localizedDescription)")
+        return []
+    }
+}
+
 struct ContentView: View {
     @State var Membership: MembershipCase = MembershipCase.none
     @State var UserName: String = ""
@@ -77,6 +91,9 @@ struct ContentView: View {
     @State var OriginalPostScript: String = ""
     @State var NewMembership: NewMembershipCase = NewMembershipCase.none
     @State var NewMembershipScript: String = ""
+    @State var ShowingAlert = false
+    @State var AlertTitle: String = ""
+    @State var AlertMessage: String = ""
 
     var body: some View {
         VStack {
@@ -144,6 +161,7 @@ struct ContentView: View {
                         let pasteBoard = NSPasteboard.general
                         pasteBoard.clearContents()
                         pasteBoard.writeObjects([FeatureScript as NSString])
+                        checkForPlaceholders(in: FeatureScript)
                     }, label: {
                         Text("Copy")
                             .padding(.horizontal, 20)
@@ -160,6 +178,7 @@ struct ContentView: View {
                         let pasteBoard = NSPasteboard.general
                         pasteBoard.clearContents()
                         pasteBoard.writeObjects([CommentScript as NSString])
+                        checkForPlaceholders(in: CommentScript)
                     }, label: {
                         Text("Copy")
                             .padding(.horizontal, 20)
@@ -167,7 +186,7 @@ struct ContentView: View {
                 }
                 .frame(alignment: .leading)
                 TextEditor(text: $CommentScript)
-                    .frame(minWidth: 200, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: 80)
+                    .frame(minWidth: 200, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: 80, maxHeight: 160)
 
                 // Original post script output
                 HStack {
@@ -176,6 +195,7 @@ struct ContentView: View {
                         let pasteBoard = NSPasteboard.general
                         pasteBoard.clearContents()
                         pasteBoard.writeObjects([OriginalPostScript as NSString])
+                        checkForPlaceholders(in: OriginalPostScript)
                     }, label: {
                         Text("Copy")
                             .padding(.horizontal, 20)
@@ -183,7 +203,7 @@ struct ContentView: View {
                 }
                 .frame(alignment: .leading)
                 TextEditor(text: $OriginalPostScript)
-                    .frame(minWidth: 200, maxWidth: .infinity, minHeight: 80)
+                    .frame(minWidth: 200, maxWidth: .infinity, minHeight: 40, maxHeight: 80)
             }
 
             Group {
@@ -199,6 +219,7 @@ struct ContentView: View {
                         let pasteBoard = NSPasteboard.general
                         pasteBoard.clearContents()
                         pasteBoard.writeObjects([NewMembershipScript as NSString])
+                        checkForPlaceholders(in: NewMembershipScript)
                     }, label: {
                         Text("Copy")
                             .padding(.horizontal, 20)
@@ -206,12 +227,21 @@ struct ContentView: View {
                 }
                 .frame(alignment: .leading)
                 TextEditor(text: $NewMembershipScript)
-                    .frame(minWidth: 200, maxWidth: .infinity, minHeight: 80)
+                    .frame(minWidth: 200, maxWidth: .infinity, minHeight: 80, maxHeight: 160)
             }
         }
         .padding()
         .frame(minWidth: 1024, minHeight: 1100)
         .textFieldStyle(.roundedBorder)
+        .alert(
+            AlertTitle,
+            isPresented: $ShowingAlert,
+            actions: {
+                Button("OK", action: {})
+            },
+            message: {
+                Text(AlertMessage)
+            })
     }
 
     func membershipChanged(to value: MembershipCase) {
@@ -251,6 +281,21 @@ struct ContentView: View {
         updateNewMembershipScripts()
     }
 
+    func checkForPlaceholders(in value: String) {
+        let placeholders = matches(of: "\\[\\[([^\\]]*)\\]\\]", in: value)
+        if placeholders.count != 0 {
+            var placeholdersList = ""
+            for placeholder in placeholders {
+                placeholdersList += placeholder + "\n"
+            }
+            if !ShowingAlert {
+                AlertTitle = "Remember to fill in the placeholders:"
+                AlertMessage = placeholdersList
+                ShowingAlert = true
+            }
+        }
+    }
+    
     func updateScripts() -> Void {
         if Membership == MembershipCase.none || UserName.isEmpty || YourName.isEmpty || (Page == PageCase.custom && PageName.isEmpty) {
             FeatureScript = ""
