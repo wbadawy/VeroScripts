@@ -1,0 +1,127 @@
+{
+  "hubs": [
+    {
+      "name": "alltrees",
+      "templates": [
+        "comment",
+        "feature",
+        "original post"
+      ]
+    },
+    {
+      "name": "beaches",
+      "templates": [
+        "comment",
+        "feature",
+        "original post"
+      ]
+    },
+    {
+      "name": "birds",
+      "templates": [
+        "comment",
+        "feature",
+        "original post"
+      ]
+    },
+    {
+      "name": "books",
+      "templates": [
+        "comment",
+        "feature",
+        "original post"
+      ]
+    },
+    {
+      "name": "canada",
+      "templates": [
+        "comment",
+        "feature",
+        "original post"
+      ]
+    },
+    {
+      "name": "default",
+      "templates": [
+        "comment",
+        "feature",
+        "original post"
+      ]
+    },
+    {
+      "name": "foggy",
+      "templates": [
+        "comment",
+        "feature",
+        "first comment",
+        "original post"
+      ]
+    },
+    {
+      "name": "landscape",
+      "templates": [
+        "comment",
+        "feature",
+        "first comment",
+        "original post"
+      ]
+    },
+    {
+      "name": "longexposure",
+      "templates": [
+        "comment",
+        "feature",
+        "original post"
+      ]
+    },
+    {
+      "name": "nightshots",
+      "templates": [
+        "comment",
+        "feature",
+        "original post"
+      ]
+    },
+    {
+      "name": "people",
+      "templates": [
+        "comment",
+        "feature",
+        "first comment",
+        "original post"
+      ]
+    },
+    {
+      "name": "potd",
+      "templates": [
+        "comment",
+        "feature",
+        "original post"
+      ]
+    },
+    {
+      "name": "reflection",
+      "templates": [
+        "comment",
+        "feature",
+        "original post"
+      ]
+    },
+    {
+      "name": "skies",
+      "templates": [
+        "comment",
+        "feature",
+        "original post"
+      ]
+    },
+    {
+      "name": "usa",
+      "templates": [
+        "comment",
+        "feature",
+        "original post"
+      ]
+    }
+  ]
+}
