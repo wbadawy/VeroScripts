@@ -6,7 +6,13 @@ The scripts are generated from a series of script templates with special marking
 
 Some of the fields are stored in user preferences so when the application is restarted, it remembers the last values entered, the moderator/admin's alias, the page and their page staff level are all saved.
 
-![Screens shot of the application](ScreenShot.png)
+## macOS Application
+
+![Screens shot of the macOS application](ScreenShot.png)
+
+## Windows Application
+
+![Screens shot of the Windows application](ScreenShotWindows.png)
 
 ## Template Notes
 
@@ -14,7 +20,7 @@ Some of the fields are stored in user preferences so when the application is res
 
 The template scripts are located in the 'Script Templates' folder, each template in a separate text file under a folder with the name of the hub. Here is an example of the three base template files:
 
-```
+```text
 Script Templates/longexposure/feature.template
 Script Templates/longexposure/comment.template
 Script Templates/longexposure/original post.template
@@ -24,7 +30,7 @@ These file names are fixed and should not be altered. If the folder for the hub 
 
 First your hub provides a slightly different script for the first time a user is featured in your hub, you can provide the different script in a template with the prefix 'first ' prepended to the file name. For example, the snap_foggy hub has a different script for the comment:
 
-```
+```text
 Script Templates/foggy/first comment.template
 ```
 
@@ -46,11 +52,11 @@ As well as the autofill placeholders, manual edited placeholders are also availa
 
 When a team admin edits one of the files, a pull request needs to be created for the change and I (andydragon) will complete the pull request, update the .stringsdict and .xcstrings files and produce a new release for download with the updated templates.
 
-If there are any questions or issues, log an issue in the 'Issues' tab (https://github.com/AndyDragon/VeroScripts/issues) and I will try to get an answer as quickly as possible.
+If there are any questions or issues, log an issue in the 'Issues' tab (<https://github.com/AndyDragon/VeroScripts/issues>) and I will try to get an answer as quickly as possible.
 
 ### Example template for the feature post
 
-```
+```text
 • #snap_%%PAGENAME%% •
 
 ⭐️ Featured %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️
