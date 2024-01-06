@@ -1,0 +1,117 @@
+﻿<Window x:Class="Vero_Scripts.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vero_Scripts"
+        xmlns:emoji="clr-namespace:Emoji.Wpf;assembly=Emoji.Wpf"
+        mc:Ignorable="d"        
+        Title="VERO Scripts" 
+        Height="800" Width="1200" MinHeight="720" MinWidth="960"
+        Style="{StaticResource CustomWindowStyle}">
+    <Window.DataContext>
+        <local:ScriptsViewModel />
+    </Window.DataContext>
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" /> <!-- User -->
+            <RowDefinition Height="Auto" /> <!-- Level -->
+            <RowDefinition Height="Auto" /> <!-- You -->
+            <RowDefinition Height="Auto" /> <!-- Page -->
+            <RowDefinition Height="Auto" /> <!-- Feature script header -->
+            <RowDefinition Height="5*" /> <!-- Feature script -->
+            <RowDefinition Height="Auto" /> <!-- Comment script header -->
+            <RowDefinition Height="3*" /> <!-- Comment script -->
+            <RowDefinition Height="Auto" /> <!-- Original post script header -->
+            <RowDefinition Height="2*" /> <!-- Original post script -->
+            <RowDefinition Height="Auto" /> <!-- New membership script header -->
+            <RowDefinition Height="3*" /> <!-- New membership script -->
+        </Grid.RowDefinitions>
+        <Grid Margin="0,0,0,8" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="User:" Grid.Column="0" VerticalAlignment="Center" FontSize="11" />
+            <TextBox Text="{Binding UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Height="20"  />
+        </Grid>
+        <Grid Margin="0,0,0,8" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Level:" Grid.Column="0" VerticalAlignment="Center" FontSize="11" />
+            <ComboBox ItemsSource="{Binding Memberships}" SelectedItem="{Binding Membership, Mode=TwoWay}" Grid.Column="1" />
+        </Grid>
+        <Grid Margin="0,0,0,8" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="You:" Grid.Column="0" VerticalAlignment="Center" FontSize="11" />
+            <TextBox Text="{Binding YourName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Height="20" />
+        </Grid>
+        <Grid Margin="0,0,0,8" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Page:" Grid.Column="0" VerticalAlignment="Center" FontSize="11" />
+            <ComboBox ItemsSource="{Binding Pages}" SelectedItem="{Binding Page, Mode=TwoWay}" Grid.Column="1" />
+            <TextBox Text="{Binding PageName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding PageNameEnabled, Mode=OneWay}" IsReadOnly="{Binding PageNameDisabled, Mode=OneWay}" Grid.Column="2" Margin="8,0,0,0" Height="20" />
+            <Label Content="Page staff level:" Grid.Column="3" Margin="8,0,0,0" VerticalAlignment="Center" FontSize="11" />
+            <ComboBox ItemsSource="{Binding StaffLevels}" SelectedItem="{Binding StaffLevel, Mode=TwoWay}" Grid.Column="4" />
+            <CheckBox IsChecked="{Binding FirstForPage}" Content="First feature on page" Grid.Column="5" Margin="8,0,0,0" VerticalAlignment="Center" FontSize="11" />
+        </Grid>
+        <Grid Margin="0,0,0,4" Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Feature script:" Grid.Column="1" VerticalAlignment="Center" FontSize="11" />
+            <Button Content="Copy" Grid.Column="2" VerticalAlignment="Center" Margin="8,0,0,0" Click="OnCopyFeatureScriptClick" />
+        </Grid>
+        <emoji:RichTextBox Text="{Binding FeatureScript, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="Auto" Grid.Row="5" Margin="0,0,0,8" />
+        <Grid Margin="0,0,0,4" Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Comment script:" Grid.Column="1" VerticalAlignment="Center" FontSize="11" />
+            <Button Content="Copy" Grid.Column="2" VerticalAlignment="Center" Margin="8,0,0,0" Click="OnCopyCommentScriptClick" />
+        </Grid>
+        <emoji:RichTextBox Text="{Binding CommentScript, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="Auto" Grid.Row="7" Margin="0,0,0,8" />
+        <Grid Margin="0,0,0,4" Grid.Row="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Original post script:" Grid.Column="1" VerticalAlignment="Center" FontSize="11" />
+            <Button Content="Copy" Grid.Column="2" VerticalAlignment="Center" Margin="8,0,0,0" Click="OnCopyOriginalPostScriptClick" />
+        </Grid>
+        <emoji:RichTextBox Text="{Binding OriginalPostScript, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="Auto" Grid.Row="9" Margin="0,0,0,8" />
+        <Grid Margin="0,0,0,3" Grid.Row="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="New membership script:" Grid.Column="1" VerticalAlignment="Center" FontSize="11" />
+            <ComboBox ItemsSource="{Binding NewMemberships}" SelectedItem="{Binding NewMembership, Mode=TwoWay}" Grid.Column="2" Width="120" />
+            <Button Content="Copy" Grid.Column="3" VerticalAlignment="Center" Margin="8,0,0,0" Click="OnCopyNewMembershipScriptClick" />
+        </Grid>
+        <emoji:RichTextBox Text="{Binding NewMembershipScript, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="Auto" Grid.Row="11" />
+    </Grid>
+</Window>
