@@ -3,124 +3,268 @@
     {
       "name": "alltrees",
       "templates": [
-        "comment",
-        "feature",
-        "original post"
+        {
+          "name": "comment",
+          "template": "⭐️🌟 @%%USERNAME%% Huge congratulations on your %%MEMBERLEVEL%% feature and your appearance on our Vero page!  Thanks so much for your support and we hope you will continue to tag us!  🌟⭐\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%% • \n.\n⭐️ Featured %%MEMBERLEVEL%%:  @%%USERNAME%% ⭐️\n•\n__________________________________\n✨CONGRATULATIONS ✨\n__________________________________\n•\nSelected by: @%%YOURNAME%% \n%%STAFFLEVEL%% on @snap_%%PAGENAME%% \n•\nJoin us in our fresh, creative and supportive community on VERO. Please follow @snap_community \n•\nCC Snap Community Owner Jane\n@snap_owner\n•\nPlease check out @snap_kingdom for more of our Snap_community pages.\n•\n#snap_community\n#vero \n#verofamily \n#verofriends \n\n#thehub_trees #forest_nation #allkindoftrees #explore_treetops #treephotography #treesplease #forest_masters #treelove #treesofvero #treesinthecity #bestforestmood #fortheloveofbranches #treesofvero #verohubs #verophotographers #verosbest #TranquilScene #Nature #VanishingPoint #Tree   \n•\n•\n For internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%%\n#snap_featured_%%USERNAME%% \n.\n"
+        },
+        {
+          "name": "original post",
+          "template": "⭐️🌟 Proud %%MEMBERLEVEL%% FEATURE, congratulations! 🌟⭐"
+        }
       ]
     },
     {
       "name": "beaches",
       "templates": [
-        "comment",
-        "feature",
-        "original post"
+        {
+          "name": "comment",
+          "template": "« CONGRATULATIONS on your feature with @snap_%%PAGENAME%% today!!! ✨🏆 😍 Thank you for sharing this wonderful image with us. Keep tagging #snap_%%PAGENAME%% for a chance of more features\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%% • \n---\n⭐️ Featured %%MEMBERLEVEL%% : @%%USERNAME%% ⭐️\n.\n__________________________________\n✨CONGRATULATIONS ✨\n__________________________________\n.\nSelected by: @%%YOURNAME%% \n%%STAFFLEVEL%% on @snap_%%PAGENAME%% \n.\nJoin us in our fresh, creative and supportive community on Vero. Please follow @snap_community  \n.\nCC Snap Community Owner Jane\n@snap_owner \n.\nPlease check out @snap_kingdom  for more of our Snap_community pages.\n•\n#snap_community\n#vero \n#verofamily \n#verofriends \n#Sea #Wave #ScenicsNature #Landscape #dramatic_sky #Coast #Cloud #Sunset #Outdoors #Ocean #beach_and_sky #rocks  #BodyOfWater #Sky #Nature #Beach  #TranquilScene \n\nPAGE HASHTAGS \n.\n.\n For internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%%   \n#snap_featured_%%USERNAME%%\n•\n"
+        },
+        {
+          "name": "original post",
+          "template": "✨Congratulations on your @snap_%%PAGENAME%% feature✨"
+        }
       ]
     },
     {
       "name": "birds",
       "templates": [
-        "comment",
-        "feature",
-        "original post"
+        {
+          "name": "comment",
+          "template": "[[USER NAME]] @%%USERNAME%%. Thank you for sharing your [[SPECIES]] image with us. Congratulations on your feature ! \n🕊️💯🕊️💯💯♥️🕊️\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%% • \n\n⭐️ Featured %%MEMBERLEVEL%% @%%USERNAME%% ⭐️\n.\n__________________________________\n✨CONGRATULATIONS ✨\n__________________________________\n.\nSelected by: @%%YOURNAME%% \n%%STAFFLEVEL%% for @snap_%%PAGENAME%% \n\nBird Species:  [[SPECIES]] \nLocation: [[LOCATION]] \n\n.\nJoin us in our fresh, creative and supportive community on Instagram. Please follow @snap_community \n.\nCC Snap Community Owner \n@snap_owner \n.\nPlease check out @snap_kingdom for more of our Snap_community pages.\n•\n#snap_community\n#vero \n#verofamily \n#verofriends \n#bird\n#bb_of_vero \n#nature\n#wildlife\n#birds \n#vero__bestshots\n#hubsofvero \n#veromyphoto \n#animalwildlife \n#birdphotography \n#feather_features \n#feathers \n\n#firstonvero\n#VERO\n\n.\n.\n For internal SNAP use only!\n#snap_%%PAGENAME%%_%%USERNAME%% \n#snap_featured_%%USERNAME%% \n.\n"
+        },
+        {
+          "name": "original post",
+          "template": "✨💫Featured %%MEMBERLEVEL%%💫✨"
+        }
       ]
     },
     {
       "name": "books",
       "templates": [
-        "comment",
-        "feature",
-        "original post"
+        {
+          "name": "comment",
+          "template": "✨✨  CONGRATULATIONS @%%USERNAME%% !!!  Thank you for tagging @snap_%%PAGENAME%% and for supporting the Vero Community ✨✨\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%% • \n\n⭐️ Featured %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️\n.\n__________________________________\n✨CONGRATULATIONS ✨\n__________________________________\n.\nSelected by: @%%YOURNAME%% \n%%STAFFLEVEL%% on @snap_%%PAGENAME%% \n.\nJoin us in our fresh, creative and supportive community on Vero. Please follow @snap_community \n.\nCC Snap Community Owner \n@snap_owner \n.\nPlease check out @snap_kingdom for more of our Snap_community pages.\n•\n#snap_community\n#vero \n#verofamily \n#verofriends \n#coffeelover #readingcorner #bookcommunity #readallthebooks #booksaddict #booksbooksandmorebooks #readersofinstagram #booklove #bookishlife #cozyreads #bookaesthetic #leseliebe\n#bookflatlay #bookiesunited #booksonbooks #booksandflowers #booksaremagic #Bookshelf #Literature #ksiazkoholizm #Publication \n\n.\n\n.\n For internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%%\n#snap_featured_%%USERNAME%%\n\n.\n"
+        },
+        {
+          "name": "original post",
+          "template": "💫🎊🎉 FEATURED on SNAP_%%PAGENAME%% 💫🎊🎉"
+        }
       ]
     },
     {
       "name": "canada",
       "templates": [
-        "comment",
-        "feature",
-        "original post"
+        {
+          "name": "comment",
+          "template": "CONGRATULATIONS @%%USERNAME%% on your feature with @snap_%%PAGENAME%% today!!! ✨🏆\n😍 Thank you for sharing this amazing shot with us. Keep tagging #snap_%%PAGENAME%% for a chance of more features.\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%% • \n\n⭐️ Featured VIP Member: @%%USERNAME%% ⭐️\n\n__________________________________\n\n✨ CONGRATULATIONS ✨\n__________________________________\n\nSelected by: @%%YOURNAME%%\n%%STAFFLEVEL%% on @snap_%%PAGENAME%%\nJoin us in our fresh, creative and supportive community on VERO. Please follow @snap_community\nCC Snap Community Owner Jane\n@snap_owner\nPlease check out @snap_kingdom for more of our Snap_community pages.\n\n#snap_community\n#vero \n#verofamily \n#verofriends \n\n#canadabound \n#canadanature\n#canadaparadise\n#canadathenorth\n#canadatour\n#canadaphotography\n#canadalife\n#canadaviews\n#canadaonline\n#imagesofcanada \n#explorecanada \n#discovercanada \n#canada\n#canada_eh \n#canadalove \n\nFor internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%%\n#snap_featured_%%USERNAME%%\n.\n"
+        },
+        {
+          "name": "original post",
+          "template": "✨ Featured %%MEMBERLEVEL%% ✨"
+        }
       ]
     },
     {
       "name": "default",
       "templates": [
-        "comment",
-        "feature",
-        "original post"
+        {
+          "name": "comment",
+          "template": " ✨✨ CONGRATULATIONS!!! ✨✨\n\n@%%USERNAME%%: You have been featured as part of the @snap_community\nThank you for tagging this great photo with #snap_%%PAGENAME%%\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%% • \n. \n⭐️ Featured %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️\n.\n__________________________________\n✨CONGRATULATIONS ✨\n__________________________________\n.\nSelected by: @%%YOURNAME%% \n%%STAFFLEVEL%% on @snap_%%PAGENAME%%\n.\nJoin us in our fresh, creative and supportive community on VERO. Please follow @snap_community \n.\nCC Snap Community Owner \n@snap_owner\n.\nPlease check out @snap_kingdom for more of our Snap_community pages.\n.\n#snap_community #vero #verofamily \n#reflections #reflectionphoto #reflectionphotos #reflectionperfection\n#reflection_addict #mirror #beautifulphotography #beautifulphoto \n#photooftheday #bestofthe_world #amazingshot #worthafollow #verofriends #verotography\n.\n For internal use only!\n\n#snap_%%PAGENAME%%_%%USERNAME%%\n#snap_featured_%%USERNAME%%\n.\n.\n.\n"
+        },
+        {
+          "name": "original post",
+          "template": "✨ Featured on @snap_%%PAGENAME%% ✨\na page out of the @snap_kingdom at the @snap_community"
+        }
       ]
     },
     {
       "name": "foggy",
       "templates": [
-        "comment",
-        "feature",
-        "first comment",
-        "original post"
+        {
+          "name": "comment",
+          "template": "🎊🌠🎉Congratulations on your foggy feature @%%USERNAME%%! Amazing photography. 🌟💫🌟Keep tagging your wonderful pictures to #snap_%%PAGENAME%%!\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%% •\n✨Featured %%MEMBERLEVEL%% : @%%USERNAME%%    ✨\n.\n__________________________________\n✨CONGRATULATIONS✨\n__________________________________\n.\nSelected by: @%%YOURNAME%% \n%%STAFFLEVEL%% on @snap_%%PAGENAME%% \n.\nJoin us in our fresh, creative and supportive community on Instagram. Please follow @snap_community \n.\nCC Snap Community Owner\n@snap_owner \n.\nPlease check out @snap_kingdom for more of our Snap_community pages.\n•\n#snap_community\n#vero\n#verofamily\n#verofriends\n#snap_community\n#vero\n#verofamily\n#verofriends\n#verofirst\n#fogphotography #foggyweather #landscapephoto #theglobewanderer #moodytones #mist_vision #landscapephotograhy #ourmoodydays #naturewonder\n.\n.\nFor internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%%   \n#snap_featured_%%USERNAME%%\n.\n"
+        },
+        {
+          "name": "first comment",
+          "template": "🎊🌠🎉Congratulations on your first foggy feature @%%USERNAME%%! Amazing photography. 🌟💫🌟Keep tagging your wonderful pictures to #snap_%%PAGENAME%%!\n"
+        },
+        {
+          "name": "original post",
+          "template": "✨✨✨FEATURED✨✨✨"
+        }
       ]
     },
     {
       "name": "landscape",
       "templates": [
-        "comment",
-        "feature",
-        "first comment",
-        "original post"
+        {
+          "name": "comment",
+          "template": "@%%USERNAME%% Congratulations on your feature today in the Snap Landscape Gallery with this amazing landscape capture! 🌟🏞👏🏞👏🏞👏🏞🌟\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%% • \n.\n📍 [[LOCATION]]\n.\n\n⭐️ Featured %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️\n.\n__________________________________\n✨CONGRATULATIONS ✨\n__________________________________\n.\nSelected by: @%%YOURNAME%% \n%%STAFFLEVEL%% on @snap_%%PAGENAME%% \n.\nJoin us in our fresh, creative and supportive community on VERO. Please follow @snap_community \n•\nCC Snap Community Owner Jane\n@snap_owner \n•\nPlease check out @snap_kingdom for more of our Snap_community pages.\n•\n#snap_community\n#vero \n#verofamily \n#verofriends \n#landscape #landscape_photography #vero_landscapes #landscape_addict #landscape_aperture  #snapcommunityonvero   #beautifulview #scenicsnature\n.\n.\n.\n.\nFor internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%% \n#snap_featured_%%USERNAME%% \n.\n"
+        },
+        {
+          "name": "first comment",
+          "template": "@%%USERNAME%% Congratulations on your feature today and welcome to the Snap Landscape Gallery with this amazing landscape capture! 🌟🏞👏🏞👏🏞👏🏞🌟\n"
+        },
+        {
+          "name": "original post",
+          "template": "🌟🏞🌟 Featured 🌟🏞🌟"
+        }
       ]
     },
     {
       "name": "longexposure",
       "templates": [
-        "comment",
-        "feature",
-        "original post"
+        {
+          "name": "comment",
+          "template": "✨✨ CONGRATULATIONS!!! ✨✨\n🏆 You have been featured @%%USERNAME%% 🏆\n😍 Just an amazing shot.\n💕 🎉 Thanks for tagging this great picture with #snap_%%PAGENAME%%\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%% •\n\n⭐️ Featured %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️\n.\n__________________________________\n ✨CONGRATULATIONS ✨\n__________________________________\n.\nSelected by: @%%YOURNAME%%\n%%STAFFLEVEL%% on @snap_%%PAGENAME%%\n.\nJoin us in our fresh, creative and supportive community on VERO. Please follow @snap_community\n.\nCC Snap Community Owner\n@snap_owner\n.\nPlease check out @snap_kingdom for more of our Snap_community pages.\n.\n#snap_community\n#vero\n#verofamily\n#verofriends\n\nPAGE HASHTAGS\n.\n#photography #nightphotography #light #night  #longexpo\n#longexposurephotography #lightjunkies #photo #silkwater #milkwater\n#thunder #verofullframe #waterfall #milkyway #shutterspeed\n.\n For internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%%\n#snap_featured_%%USERNAME%%\n.\n"
+        },
+        {
+          "name": "original post",
+          "template": "✨ Featured on @snap_%%PAGENAME%% ✨\na page out of the @snap_kingdom at the @snap_community"
+        }
       ]
     },
     {
       "name": "nightshots",
       "templates": [
-        "comment",
-        "feature",
-        "original post"
+        {
+          "name": "comment",
+          "template": "✨✨Congratulations✨✨ on your amazing feature @%%USERNAME%% ! \n✨✨Thank you for tagging us in your work #snap_%%PAGENAME%%! ✨✨\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%% • \n\n⭐️ Featured %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️\n.\n__________________________________\n✨CONGRATULATIONS ✨\n__________________________________\n.\nSelected by: @%%YOURNAME%% \n%%STAFFLEVEL%% on @snap_%%PAGENAME%% \n.\nJoin us in our fresh, creative and supportive community on Instagram. Please follow @snap_community \n.\nCC Snap Community Owner \n@snap_owner \n.\nPlease check out @snap_kingdom for more of our Snap_community pages.\n•\n#snap_community\n#vero \n#verofamily \n#verofriends \n\nPAGE HASHTAGS \n.\n.\n For internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%%\n#snap_featured_%%USERNAME%%\n.\n"
+        },
+        {
+          "name": "original post",
+          "template": "✨Congratulations, you’ve been featured on @snap_%%PAGENAME%% ! ✨"
+        }
       ]
     },
     {
       "name": "people",
       "templates": [
-        "comment",
-        "feature",
-        "first comment",
-        "original post"
+        {
+          "name": "comment",
+          "template": "🎉 @%%USERNAME%% 👏💕💫 A wonderful portrait. Congratulations on your feature with @snap_%%PAGENAME%% today. Thank you for using our hashtag. Keep tagging #snap_%%PAGENAME%% or #snap_portrait for a chance of more features. 👍💙🎉\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%%\n.\n✨ Featured Snap %%MEMBERLEVEL%%: @%%USERNAME%% ✨\n.\n__________________________________\n✨CONGRATULATIONS ✨\n__________________________________\n•\nSelected by: @%%YOURNAME%% \n%%STAFFLEVEL%% on @snap_%%PAGENAME%% \n•\nJoin us in our fresh, creative and supportive community on VERO. Please follow @snap_community \n•\nCC Snap Community Owner Jane\n@snap_owner \n•\nPlease check out @snap_kingdom for more of our Snap_community pages.\n•\n#snap_community\n#vero \n#verofamily \n#verofriends \n#portraits_community \n#great_captures_people \n#portrait_captures\n#pursuitofportraits \n#portraitgames \n#pictasportrait \n#podium_portraits \n#postthepeople \n#makeportraits \n#portraitpage\n#portraitvision \n#theportraitpr0ject \n#portraitstream \n#earth_portraits \n#portraitphotography\n•\n•\n For internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%% \n#snap_featured_%%USERNAME%%  \n•\n"
+        },
+        {
+          "name": "first comment",
+          "template": "🎉 @%%USERNAME%% 👏💕💫 A wonderful portrait. Congratulations on your first feature with @snap_%%PAGENAME%% today, and welcome to our gallery. Thank you for using our hashtag. Keep tagging #snap_%%PAGENAME%% or #snap_portrait for a chance of more features. 👍💙🎉\n"
+        },
+        {
+          "name": "original post",
+          "template": "💫 Snap Community %%MEMBERLEVEL%% feature 💫"
+        }
       ]
     },
     {
       "name": "potd",
       "templates": [
-        "comment",
-        "feature",
-        "original post"
+        {
+          "name": "comment",
+          "template": "✨✨ CONGRATULATIONS!!! ✨✨\n🏆 You have been featured. @%%USERNAME%% 🏆\n😍 Just an amazing shot.\n💕 🎉 Thanks for tagging this great picture with #snap_%%PAGENAME%% 🙏 😃 💜\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%% • \n\n⭐️ Featured %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️\n.\n__________________________________\n✨CONGRATULATIONS ✨\n__________________________________\n.\nSelected by: @%%YOURNAME%% \n%%STAFFLEVEL%% on @snap_%%PAGENAME%% \n.\nJoin us in our fresh, creative and supportive community on VERO. Please follow @snap_community \n.\nCC Snap Community Owner Jane\n@snap_owner \n.\nPlease check out @snap_kingdom for more of our Snap_community pages.\n•\n#snap_community\n#vero \n#verofamily \n#verofriends  \n\n#picoftheday #onverofirst #photography #night_addict #createexplore #photoofday #photohunter #worldphotography #bevisuallyinspired #bnw #scenic_nature #reflection #MountainRange #nature #landscape #macro #amazingshot\n.\n.\n For internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%% \n#snap_featured_%%USERNAME%% \n.\n"
+        },
+        {
+          "name": "original post",
+          "template": "✨ Featured on @snap_%%PAGENAME%% ✨ a page out of @snap_kingdom at the @snap_community"
+        }
       ]
     },
     {
       "name": "reflection",
       "templates": [
-        "comment",
-        "feature",
-        "original post"
+        {
+          "name": "comment",
+          "template": "✨✨ CONGRATULATIONS!!! ✨✨\n[[ARTIST NAME]]: You have been featured as part of the @snap_community \n[[write individual comment to represent photo featured]]\nThank you for tagging this great photo with #snap_%%PAGENAME%%\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%% • \n. #snap_reflection_bnw\n\n⭐️ Featured %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️\n.\n__________________________________\n✨CONGRATULATIONS ✨\n__________________________________\n.\nSelected by: @%%YOURNAME%% \n%%STAFFLEVEL%% on @snap_%%PAGENAME%% \n.\nJoin us in our fresh, creative and supportive community on Instagram. Please follow @snap_community \n.\nCC Snap Community Owner \n@snap_owner \n.\nPlease check out @snap_kingdom for more of our Snap_community pages.\n•\n#snap_community\n#vero \n#verofamily \n#reflections #reflectionphoto #reflectionphotos #reflectionperfection #reflection_addict #mirror #beautifulphotography #beautifulphoto #photooftheday #bestofthe_world #amazingshot #worthafollow #verofriends #verotography\n\n.\n For internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%%\n#snap_featured_%%USERNAME%%.\n.\n"
+        },
+        {
+          "name": "original post",
+          "template": "✨ Featured by @snap_%%PAGENAME%% ✨\na page out of the @snap_kingdom at the @snap_community"
+        }
       ]
     },
     {
       "name": "skies",
       "templates": [
-        "comment",
-        "feature",
-        "original post"
+        {
+          "name": "comment",
+          "template": "✨✨ CONGRATULATIONS!!! @%%USERNAME%% ✨✨\n You have been featured as part of the @snap_community \nFantastic shot,  💫💫 Thanks for tagging this great picture with #snap_%%PAGENAME%%\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%%• \n\n⭐️ Featured *%%MEMBERLEVEL%%*: @%%USERNAME%%  ⭐️\n.\n__________________________________\n✨CONGRATULATIONS ✨\n__________________________________\n.\nSelected by: @%%YOURNAME%%\n%%STAFFLEVEL%% on @snap_%%PAGENAME%%\n.\nJoin us in our fresh, creative and supportive community on Instagram. Please follow @snap_community \n.\nCC Snap Community Owner \n@snap_owner\n.\nPlease check out @snap_kingdom for more of our Snap_community pages.\n•\n#snap_community\n#vero \n#verofamily \n#verofriends \n#skylover \n#skyphotography \n#sky #sunset #sunrise #clouds #skyscapes #skiesofvero\n#sunset_madness #sky_perfection \n  \n@snap_%%PAGENAME%%\n.\n.\n For internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%%\n#snap_featured_%%USERNAME%%\n.\n"
+        },
+        {
+          "name": "original post",
+          "template": "✨✨ Congratulations\n   Featured @snap_%%PAGENAME%% ✨✨"
+        }
       ]
     },
     {
       "name": "usa",
       "templates": [
-        "comment",
-        "feature",
-        "original post"
+        {
+          "name": "comment",
+          "template": "🏆 Congratulations on your Snap Member feature, @%%USERNAME%% \nIt’s wonderful to see your photo in our gallery! Thanks for sharing it with us and Keep Tagging: #snap_%%PAGENAME%% \nWe look forward to seeing more of your work!! ❤️🤍💙\n"
+        },
+        {
+          "name": "feature",
+          "template": "• #snap_%%PAGENAME%% • \n.\n✨ [[LOCATION]] ✨️\n.\n⭐️ Featured Snap %%MEMBERLEVEL%%: @%%USERNAME%% ⭐️\n.\n__________________________________\n✨CONGRATULATIONS ✨\n__________________________________\n.\nSelected by: @%%YOURNAME%% \n%%STAFFLEVEL%% for @snap_%%PAGENAME%% \n.\nJoin us in our fresh, creative and supportive community on Vero. Please follow @snap_community \n.\nCC Snap Community Owner Jane\n@snap_owner \n.\nPlease check out @ snap_kingdom for more of our Snap_community pages\n\n\n•\n#Usa #Photography #exploring #outdoors #captures #adventure #wanderlust #global_capture #Travel #mood #roamtheplanet #photographerlife \n\n.\n.\nFor internal use only!\n#snap_%%PAGENAME%%_%%USERNAME%%\n#snap_featured_%%USERNAME%%\n.   \n"
+        },
+        {
+          "name": "original post",
+          "template": "✨Featured ..Snap %%MEMBERLEVEL%% ❤️"
+        }
       ]
     }
   ]

@@ -33,25 +33,6 @@ enum StaffLevelCase: String, CaseIterable, Identifiable {
     var id: Self { self }
 }
 
-enum PageCase: String, CaseIterable, Identifiable {
-    case custom = "custom",
-         allTrees = "alltrees",
-         beaches = "beaches",
-         birds = "birds",
-         books = "books",
-         canada = "canada",
-         foggy = "foggy",
-         landscape = "landscape",
-         longExposure = "longexposure",
-         nightShots = "nightshots",
-         people = "people",
-         potd = "potd",
-         reflection = "reflection",
-         skies = "skies",
-         usa = "usa"
-    var id: Self { self }
-}
-
 extension Binding {
     func onChange(_ handler: @escaping (Value) -> Void) -> Binding<Value> {
         Binding(
@@ -78,11 +59,47 @@ func matches(of regex: String, in text: String) -> [String] {
     }
 }
 
+struct HubCatalog: Codable {
+    let hubs: [Hub]
+}
+
+struct Hub: Codable, Identifiable {
+    var id: String { self.name }
+    let name: String
+    let templates: [Template]
+}
+
+struct Template: Codable, Identifiable {
+    var id: String { self.name }
+    let name: String
+    let template: String
+}
+
+extension URLSession {
+    func decode<T: Decodable>(
+        _ type: T.Type = T.self,
+        from url: URL,
+        keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys,
+        dataDecodingStrategy: JSONDecoder.DataDecodingStrategy = .deferredToData,
+        dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate
+    ) async throws  -> T {
+        let (data, _) = try await data(from: url)
+
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = keyDecodingStrategy
+        decoder.dataDecodingStrategy = dataDecodingStrategy
+        decoder.dateDecodingStrategy = dateDecodingStrategy
+
+        let decoded = try decoder.decode(T.self, from: data)
+        return decoded
+    }
+}
+
 struct ContentView: View {
     @State var Membership: MembershipCase = MembershipCase.none
     @State var UserName: String = ""
     @State var YourName: String = UserDefaults.standard.string(forKey: "YourName") ?? ""
-    @State var Page: PageCase = PageCase(rawValue: UserDefaults.standard.string(forKey: "Page") ?? PageCase.custom.rawValue) ?? PageCase.custom
+    @State var Page: String = UserDefaults.standard.string(forKey: "Page") ?? "default"
     @State var PageName: String = UserDefaults.standard.string(forKey: "PageName") ?? ""
     @State var PageStaffLevel: StaffLevelCase = StaffLevelCase(rawValue: UserDefaults.standard.string(forKey: "StaffLevel") ?? StaffLevelCase.mod.rawValue) ?? StaffLevelCase.mod
     @State var FirstForPage: Bool = false
@@ -94,6 +111,9 @@ struct ContentView: View {
     @State var ShowingAlert = false
     @State var AlertTitle: String = ""
     @State var AlertMessage: String = ""
+    @State var TerminalAlert = false
+    @State var WaitingForCatalog: Bool = true
+    @State var HubsCatalog = HubCatalog(hubs: [])
 
     var body: some View {
         VStack {
@@ -129,8 +149,8 @@ struct ContentView: View {
                 // Page name editor
                 HStack {
                     Picker("Page: ", selection: $Page.onChange(pageChanged)) {
-                        ForEach(PageCase.allCases) { pageCase in
-                            Text(pageCase.rawValue).tag(pageCase)
+                        ForEach(HubsCatalog.hubs) { hub in
+                            Text(hub.name).tag(hub.name)
                         }
                     }
                     .focusable()
@@ -138,8 +158,8 @@ struct ContentView: View {
                         "Enter page name:",
                         text: $PageName.onChange(pageNameChanged)
                     )
-                    .disabled(Page != PageCase.custom)
-                    .focusable(Page == PageCase.custom)
+                    .disabled(Page != "default")
+                    .focusable(Page == "default")
                     Picker("Page staff level: ", selection: $PageStaffLevel.onChange(pageStaffLevelChanged)) {
                         ForEach(StaffLevelCase.allCases) { staffLevelCase in
                             Text(staffLevelCase.rawValue).tag(staffLevelCase)
@@ -169,7 +189,7 @@ struct ContentView: View {
                 }
                 .frame(alignment: .leading)
                 TextEditor(text: $FeatureScript)
-                    .frame(minWidth: 400, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: 200)
+                    .frame(minWidth: 400, maxWidth: .infinity, minHeight: 200)
 
                 // Comment script output
                 HStack {
@@ -186,7 +206,7 @@ struct ContentView: View {
                 }
                 .frame(alignment: .leading)
                 TextEditor(text: $CommentScript)
-                    .frame(minWidth: 200, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: 80, maxHeight: 160)
+                    .frame(minWidth: 200, maxWidth: .infinity, minHeight: 80, maxHeight: 160)
 
                 // Original post script output
                 HStack {
@@ -237,11 +257,28 @@ struct ContentView: View {
             AlertTitle,
             isPresented: $ShowingAlert,
             actions: {
-                Button("OK", action: {})
+                Button("OK", action: {
+                    if TerminalAlert {
+                        NSApplication.shared.terminate(nil)
+                    }
+                })
             },
             message: {
                 Text(AlertMessage)
             })
+        .disabled(WaitingForCatalog)
+        .task {
+            do {
+                let hubsUrl = URL(string: "https://andydragon.com/depot/VERO/hubs.json")!
+                HubsCatalog = try await URLSession.shared.decode(HubCatalog.self, from: hubsUrl)
+                WaitingForCatalog = false;
+            } catch {
+                AlertTitle = "Could not load the hubs catalog from the server"
+                AlertMessage = "The application requires the catalog to perform its operations"
+                TerminalAlert = true
+                ShowingAlert = true
+            }
+        }
     }
 
     func membershipChanged(to value: MembershipCase) {
@@ -258,8 +295,8 @@ struct ContentView: View {
         updateScripts()
     }
 
-    func pageChanged(to value: PageCase) {
-        UserDefaults.standard.set(Page.rawValue, forKey: "Page")
+    func pageChanged(to value: String) {
+        UserDefaults.standard.set(Page, forKey: "Page")
         updateScripts()
     }
 
@@ -297,26 +334,15 @@ struct ContentView: View {
     }
     
     func updateScripts() -> Void {
-        if Membership == MembershipCase.none || UserName.isEmpty || YourName.isEmpty || (Page == PageCase.custom && PageName.isEmpty) {
+        if Membership == MembershipCase.none || UserName.isEmpty || YourName.isEmpty || (Page == "default" && PageName.isEmpty) {
             FeatureScript = ""
             OriginalPostScript = ""
             CommentScript = ""
         } else {
-            var pageName: String
-            var featureScriptTemplate: String
-            var commentScriptTemplate: String
-            var originalPostScriptTemplate: String
-            if Page == PageCase.custom {
-                pageName = PageName
-                featureScriptTemplate = getTemplate("feature", table: PageName, first: FirstForPage)
-                commentScriptTemplate = getTemplate("comment", table: PageName, first: FirstForPage)
-                originalPostScriptTemplate = getTemplate("original post", table: PageName, first: FirstForPage)
-            } else {
-                pageName = Page.rawValue
-                featureScriptTemplate = getTemplate("feature", table: Page.rawValue, first: FirstForPage)
-                commentScriptTemplate = getTemplate("comment", table: Page.rawValue, first: FirstForPage)
-                originalPostScriptTemplate = getTemplate("original post", table: Page.rawValue, first: FirstForPage)
-            }
+            let pageName = Page == "default" ? PageName : Page
+            let featureScriptTemplate = getTemplateFromHubs("feature", from: pageName, firstFeature: FirstForPage) ?? ""
+            let commentScriptTemplate = getTemplateFromHubs("comment", from: pageName, firstFeature: FirstForPage) ?? ""
+            let originalPostScriptTemplate = getTemplateFromHubs("original post", from: pageName, firstFeature: FirstForPage) ?? ""
             FeatureScript = featureScriptTemplate
                 .replacingOccurrences(of: "%%PAGENAME%%", with: pageName)
                 .replacingOccurrences(of: "%%MEMBERLEVEL%%", with: Membership.rawValue)
@@ -337,47 +363,24 @@ struct ContentView: View {
                 .replacingOccurrences(of: "%%STAFFLEVEL%%", with: PageStaffLevel.rawValue)
         }
     }
-
-    func getTemplate(_ templateName: String, table: String, first: Bool) -> String {
-        // If first for page
-        var template: String = templateName
-        
-        // If looking for "first" template, check for that first in the "new" string catalog.
-        if first {
-            let needle = "first " + templateName
-            template = String(localized: String.LocalizationValue(needle), table: "new_" + table)
-            if template != needle {
-                return template
+    
+    func getTemplateFromHubs(_ templateName: String, from hubName: String, firstFeature: Bool) -> String! {
+        var template: Template!
+        let defaultHub = HubsCatalog.hubs.first(where: { hub in hub.name == "default" });
+        let hub = HubsCatalog.hubs.first(where: { hub in hub.name == hubName});
+        if FirstForPage {
+            template = hub?.templates.first(where: { template in template.name == "first " + templateName})
+            if template == nil {
+                template = defaultHub?.templates.first(where: { template in template.name == "first " + templateName})
             }
         }
-        
-        // Check for non-"first" template in the "new" string catalog.
-        template = String(localized: String.LocalizationValue(templateName), table: "new_" + table)
-        if template != templateName {
-            return template
+        if template == nil {
+            template = hub?.templates.first(where: { template in template.name == templateName})
         }
-        
-        // If looking for "first" template, check for that next in the old strings dict.
-        if first {
-            let needle = "first " + templateName
-            template = String(localized: String.LocalizationValue(needle), table: table)
-            if template != needle {
-                return template
-            }
+        if template == nil {
+            template = defaultHub?.templates.first(where: { template in template.name == templateName})
         }
-
-        // Check for non-"first" template in the old strings dict.
-        template = String(localized: String.LocalizationValue(templateName), table: table)
-        if template != templateName {
-            return template
-        }
-        
-        // Did not find it in the table, try the default table.
-        if table != "default" {
-            template = getTemplate(templateName, table: "default", first: first)
-        }
-
-        return template
+        return template?.template
     }
 
     func updateNewMembershipScripts() -> Void {
