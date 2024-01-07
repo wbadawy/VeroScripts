@@ -114,6 +114,8 @@ struct ContentView: View {
     @State var TerminalAlert = false
     @State var WaitingForCatalog: Bool = true
     @State var HubsCatalog = HubCatalog(hubs: [])
+    
+    @Environment(\.colorScheme) var ColorScheme
 
     var body: some View {
         VStack {
@@ -121,33 +123,57 @@ struct ContentView: View {
                 // User name editor
                 HStack {
                     Text("User: ")
-                        .frame(width: 40, alignment: .leading)
+#if os(iOS)
+                        .frame(width: 60, alignment: .leading)
+#else
+                        .frame(width: 38, alignment: .leading)
+#endif
                     TextField(
-                        "Enter user name:",
+                        "Enter user name",
                         text: $UserName.onChange(userNameChanged)
                     )
+#if os(iOS)
+                    .textInputAutocapitalization(.never)
+#endif
                 }
-
+                
                 // User level picker
-                Picker("Level: ", selection: $Membership.onChange(membershipChanged)) {
-                    ForEach(MembershipCase.allCases) { level in
-                        Text(level.rawValue).tag(level)
+                HStack {
+#if os(iOS)
+                    Text("Level: ")
+                        .frame(width: 60, alignment: .leading)
+#endif
+                    Picker("Level: ", selection: $Membership.onChange(membershipChanged)) {
+                        ForEach(MembershipCase.allCases) { level in
+                            Text(level.rawValue).tag(level)
+                        }
                     }
+                    .focusable()
+                    Spacer()
                 }
-                .focusable()
 
                 // Your name editor
                 HStack {
                     Text("You: ")
-                        .frame(width: 40, alignment: .leading)
+#if os(iOS)
+                        .frame(width: 60, alignment: .leading)
+#else
+                        .frame(width: 38, alignment: .leading)
+#endif
                     TextField(
                         "Enter your name:",
                         text: $YourName.onChange(yourNameChanged)
                     )
+#if os(iOS)
+                    .textInputAutocapitalization(.never)
+#endif
                 }
-
+                
                 // Page name editor
                 HStack {
+#if os(iOS)
+                    Text("Page: ")
+#endif
                     Picker("Page: ", selection: $Page.onChange(pageChanged)) {
                         ForEach(HubsCatalog.hubs) { hub in
                             Text(hub.name).tag(hub.name)
@@ -155,103 +181,179 @@ struct ContentView: View {
                     }
                     .focusable()
                     TextField(
-                        "Enter page name:",
+                        "Enter page name",
                         text: $PageName.onChange(pageNameChanged)
                     )
                     .disabled(Page != "default")
                     .focusable(Page == "default")
+#if os(iOS)
+                    .textInputAutocapitalization(.never)
+#endif
+#if os(iOS)
+                    Text("Page staff level: ")
+#endif
                     Picker("Page staff level: ", selection: $PageStaffLevel.onChange(pageStaffLevelChanged)) {
                         ForEach(StaffLevelCase.allCases) { staffLevelCase in
                             Text(staffLevelCase.rawValue).tag(staffLevelCase)
                         }
                     }
                     .focusable()
+#if !os(iOS)
                     Toggle(isOn: $FirstForPage.onChange(firstForPageChanged)) {
                         Text("First feature on page")
                     }
                     .focusable()
+#else
+                    Spacer()
+#endif
                 }
             }
-
+            
+#if os(iOS)
+            HStack {
+                Toggle(isOn: $FirstForPage.onChange(firstForPageChanged)) {
+                    Text("First feature on page")
+                }
+                .focusable()
+                Spacer()
+            }
+#endif
+            
             Group {
                 // Feature script output
                 HStack {
                     Text("Feature script:")
                     Button(action: {
+#if os(iOS)
+                        UIPasteboard.general.string = FeatureScript
+#else
                         let pasteBoard = NSPasteboard.general
                         pasteBoard.clearContents()
                         pasteBoard.writeObjects([FeatureScript as NSString])
+#endif
                         checkForPlaceholders(in: FeatureScript)
                     }, label: {
                         Text("Copy")
                             .padding(.horizontal, 20)
                     })
+                    Spacer()
                 }
                 .frame(alignment: .leading)
                 TextEditor(text: $FeatureScript)
+#if os(iOS)
+                    .frame(maxWidth: .infinity, minHeight: 100)
+                    .colorMultiply(Color(
+                        red: ColorScheme == .dark ? 1.05 : 0.95,
+                        green: ColorScheme == .dark ? 1.05 : 0.95,
+                        blue: ColorScheme == .dark ? 1.05 : 0.95))
+                    .border(.gray)
+#else
                     .frame(minWidth: 400, maxWidth: .infinity, minHeight: 200)
-
+#endif
                 // Comment script output
                 HStack {
                     Text("Comment script:")
                     Button(action: {
+#if os(iOS)
+                        UIPasteboard.general.string = CommentScript
+#else
                         let pasteBoard = NSPasteboard.general
                         pasteBoard.clearContents()
                         pasteBoard.writeObjects([CommentScript as NSString])
+#endif
                         checkForPlaceholders(in: CommentScript)
                     }, label: {
                         Text("Copy")
                             .padding(.horizontal, 20)
                     })
+                    Spacer()
                 }
                 .frame(alignment: .leading)
                 TextEditor(text: $CommentScript)
+#if os(iOS)
+                    .frame(maxWidth: .infinity, minHeight: 60, maxHeight: 80)
+                    .colorMultiply(Color(
+                        red: ColorScheme == .dark ? 1.05 : 0.95,
+                        green: ColorScheme == .dark ? 1.05 : 0.95,
+                        blue: ColorScheme == .dark ? 1.05 : 0.95))
+                    .border(.gray)
+#else
                     .frame(minWidth: 200, maxWidth: .infinity, minHeight: 80, maxHeight: 160)
-
+#endif
+                
                 // Original post script output
                 HStack {
                     Text("Original post script:")
                     Button(action: {
+#if os(iOS)
+                        UIPasteboard.general.string = OriginalPostScript
+#else
                         let pasteBoard = NSPasteboard.general
                         pasteBoard.clearContents()
                         pasteBoard.writeObjects([OriginalPostScript as NSString])
+#endif
                         checkForPlaceholders(in: OriginalPostScript)
                     }, label: {
                         Text("Copy")
                             .padding(.horizontal, 20)
                     })
+                    Spacer()
                 }
                 .frame(alignment: .leading)
                 TextEditor(text: $OriginalPostScript)
+#if os(iOS)
+                    .frame(maxWidth: .infinity, minHeight: 40, maxHeight: 60)
+                    .colorMultiply(Color(
+                        red: ColorScheme == .dark ? 1.05 : 0.95,
+                        green: ColorScheme == .dark ? 1.05 : 0.95,
+                        blue: ColorScheme == .dark ? 1.05 : 0.95))
+                    .border(.gray)
+#else
                     .frame(minWidth: 200, maxWidth: .infinity, minHeight: 40, maxHeight: 80)
+#endif
             }
-
+            
             Group {
                 // New membership picker and script output
                 HStack {
-                    Text("New membership script:")
+#if os(iOS)
+                    Text("New membership: ")
+#endif
                     Picker("New membership: ", selection: $NewMembership.onChange(newMembershipChanged)) {
                         ForEach(NewMembershipCase.allCases) { level in
                             Text(level.rawValue).tag(level)
                         }
                     }
                     Button(action: {
+#if os(iOS)
+                        UIPasteboard.general.string = NewMembershipScript
+#else
                         let pasteBoard = NSPasteboard.general
                         pasteBoard.clearContents()
                         pasteBoard.writeObjects([NewMembershipScript as NSString])
+#endif
                         checkForPlaceholders(in: NewMembershipScript)
                     }, label: {
                         Text("Copy")
                             .padding(.horizontal, 20)
                     })
+                    Spacer()
                 }
                 .frame(alignment: .leading)
                 TextEditor(text: $NewMembershipScript)
+#if os(iOS)
+                    .frame(maxWidth: .infinity, minHeight: 60, maxHeight: 80)
+                    .colorMultiply(Color(
+                        red: ColorScheme == .dark ? 1.05 : 0.95,
+                        green: ColorScheme == .dark ? 1.05 : 0.95,
+                        blue: ColorScheme == .dark ? 1.05 : 0.95))
+                    .border(.gray)
+#else
                     .frame(minWidth: 200, maxWidth: .infinity, minHeight: 80, maxHeight: 160)
+#endif
             }
         }
         .padding()
-        .frame(minWidth: 1024, minHeight: 1100)
         .textFieldStyle(.roundedBorder)
         .alert(
             AlertTitle,
@@ -259,7 +361,10 @@ struct ContentView: View {
             actions: {
                 Button("OK", action: {
                     if TerminalAlert {
+#if os(iOS)
+#else
                         NSApplication.shared.terminate(nil)
+#endif
                     }
                 })
             },
